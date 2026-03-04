@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dchcij1xvxlv2"]
+
+[ext_resource type="Material" uid="uid://dvi6u46anta2n" path="res://Assets/Materials/SM_Weight1.tres" id="1_4cheh"]
+[ext_resource type="ArrayMesh" uid="uid://dmk76u03lf518" path="res://Assets/Models/Weight1.obj" id="2_mwgjf"]
+
+[node name="Weight1" type="Node3D" unique_id=1850483898]
+
+[node name="Weight1" type="MeshInstance3D" parent="." unique_id=385408714]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008, 0, 0)
+material_override = ExtResource("1_4cheh")
+mesh = ExtResource("2_mwgjf")

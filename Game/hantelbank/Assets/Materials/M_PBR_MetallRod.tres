@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://rrlqe03r3kx0"]
+
+[ext_resource type="Texture2D" uid="uid://d1vjw2p8ym2ia" path="res://Assets/Materials/Textures/Metall/Metal_scratched_009_basecolor.jpg" id="1_8x5vj"]
+[ext_resource type="Texture2D" uid="uid://dkbfk8vxiaqfg" path="res://Assets/Materials/Textures/Metall/Metal_scratched_009_metallic.jpg" id="2_hf5i7"]
+[ext_resource type="Texture2D" uid="uid://dhtoewo4yf7d3" path="res://Assets/Materials/Textures/Metall/Metal_scratched_009_normal.jpg" id="3_475gl"]
+[ext_resource type="Texture2D" uid="uid://4powwhnty5iq" path="res://Assets/Materials/Textures/Metall/Metal_scratched_009_roughness.jpg" id="4_t7rkr"]
+
+[resource]
+albedo_texture = ExtResource("1_8x5vj")
+metallic = 1.0
+metallic_texture = ExtResource("2_hf5i7")
+roughness_texture = ExtResource("4_t7rkr")
+normal_enabled = true
+normal_texture = ExtResource("3_475gl")

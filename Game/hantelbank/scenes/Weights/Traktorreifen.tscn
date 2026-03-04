@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cgqrgme3ftybr"]
+
+[ext_resource type="ArrayMesh" uid="uid://t4cnkpg866dm" path="res://Assets/Models/Traktorreifen.obj" id="1_3rh0b"]
+[ext_resource type="Material" uid="uid://rrlqe03r3kx0" path="res://Assets/Materials/M_PBR_MetallRod.tres" id="2_ojyxb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ojyxb"]
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Traktorreifen" type="Node3D" unique_id=1850483898]
+
+[node name="Traktorreifen" type="MeshInstance3D" parent="." unique_id=2061976530]
+mesh = ExtResource("1_3rh0b")
+surface_material_override/0 = SubResource("StandardMaterial3D_ojyxb")
+surface_material_override/1 = ExtResource("2_ojyxb")
