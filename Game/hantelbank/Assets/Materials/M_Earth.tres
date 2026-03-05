@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3haqx2ddwk7o"]
+
+[ext_resource type="Texture2D" uid="uid://cvf1gktg4b56u" path="res://Assets/Materials/Textures/Earth/2k_earth_daymap.jpg" id="1_yp4ek"]
+[ext_resource type="Texture2D" uid="uid://hsey0gyjn8kr" path="res://Assets/Materials/Textures/Earth/2k_earth_specular_map.jpg" id="2_na0xx"]
+[ext_resource type="Texture2D" uid="uid://wll18fbke843" path="res://Assets/Materials/Textures/Earth/2k_earth_normal_map.jpg" id="3_1bucb"]
+
+[resource]
+albedo_texture = ExtResource("1_yp4ek")
+metallic = 0.35
+metallic_specular = 0.77
+metallic_texture = ExtResource("2_na0xx")
+normal_enabled = true
+normal_scale = -1.52
+normal_texture = ExtResource("3_1bucb")

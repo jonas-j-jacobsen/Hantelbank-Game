@@ -12,7 +12,7 @@ public partial class BaseClickParticle : Node3D
 	{
 		Position += new Vector3(0, 1f * (float)delta, -.5f * (float)delta);
 		lifetime -= delta;
-		GD.Print(Position);
+
 
 		if (lifetime < 0) QueueFree();
     }
@@ -26,8 +26,15 @@ public partial class BaseClickParticle : Node3D
 		}
 		else
 		{
-			Label.Text = "WOW!!!";
+			Label.Text = "STARK!!!";
 
         }
 	}
+
+	public void setUpText(string text)
+	{
+        Label.Text = text;
+		Label.Modulate = new Color(0f,.99f,0.26f, 1);
+		Label.FontSize = 18;	
+    }
 }

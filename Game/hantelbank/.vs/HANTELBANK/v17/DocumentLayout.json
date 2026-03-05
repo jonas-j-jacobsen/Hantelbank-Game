@@ -1,22 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jonas\\Documents\\hantelbank\\",
+  "WorkspaceRootPath": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jonas\\Documents\\hantelbank\\ClickableObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ClickableObject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scripts\\clickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scripts\\clickableobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|c:\\users\\jonas\\documents\\hantelbank\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scenes\\clickparticles\\baseclickparticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scenes\\clickparticles\\baseclickparticle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scripts\\networkmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|c:\\users\\jonas\\documents\\hantelbank\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scripts\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\WindowManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\WindowManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|f:\\minigames\\hantelbank\\game\\hantelbank\\scripts\\globe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D8206A2-25DB-4CF1-8D91-E9B555F9672C}|Hantelbank.csproj|solutionrelative:scripts\\globe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,55 +38,79 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NetworkManager.cs",
-              "DocumentMoniker": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\NetworkManager.cs",
-              "RelativeDocumentMoniker": "scripts\\NetworkManager.cs",
-              "ToolTip": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\NetworkManager.cs",
-              "RelativeToolTip": "scripts\\NetworkManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAAdAAAA",
+              "DocumentIndex": 5,
+              "Title": "Globe.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\Globe.cs",
+              "RelativeDocumentMoniker": "scripts\\Globe.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\Globe.cs",
+              "RelativeToolTip": "scripts\\Globe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T10:56:42.992Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T17:20:42.82Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WindowManager.cs",
-              "DocumentMoniker": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\WindowManager.cs",
-              "RelativeDocumentMoniker": "scripts\\WindowManager.cs",
-              "ToolTip": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\WindowManager.cs",
-              "RelativeToolTip": "scripts\\WindowManager.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAAswDkAAAAFAAAA",
+              "DocumentIndex": 2,
+              "Title": "BaseClickParticle.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scenes\\ClickParticles\\BaseClickParticle.cs",
+              "RelativeDocumentMoniker": "scenes\\ClickParticles\\BaseClickParticle.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scenes\\ClickParticles\\BaseClickParticle.cs",
+              "RelativeToolTip": "scenes\\ClickParticles\\BaseClickParticle.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwCUAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T10:12:50.883Z",
+              "WhenOpened": "2026-03-04T12:08:07.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ClickableObject.cs",
-              "DocumentMoniker": "C:\\Users\\Jonas\\Documents\\hantelbank\\ClickableObject.cs",
-              "RelativeDocumentMoniker": "ClickableObject.cs",
-              "ToolTip": "C:\\Users\\Jonas\\Documents\\hantelbank\\ClickableObject.cs",
-              "RelativeToolTip": "ClickableObject.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEYAAAAnAAAA",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\ClickableObject.cs",
+              "RelativeDocumentMoniker": "scripts\\ClickableObject.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\ClickableObject.cs",
+              "RelativeToolTip": "scripts\\ClickableObject.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwC8AAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T09:55:54.571Z",
+              "WhenOpened": "2026-03-04T12:06:08.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
+              "Title": "NetworkManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\NetworkManager.cs",
+              "RelativeDocumentMoniker": "scripts\\NetworkManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\NetworkManager.cs",
+              "RelativeToolTip": "scripts\\NetworkManager.cs",
+              "ViewState": "AQIAALMAAAAAAAAAAAAUwLcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T10:56:42.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WindowManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\WindowManager.cs",
+              "RelativeDocumentMoniker": "scripts\\WindowManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\WindowManager.cs",
+              "RelativeToolTip": "scripts\\WindowManager.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAswDkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-28T10:12:50.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\Main.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\Main.cs",
               "RelativeDocumentMoniker": "scripts\\Main.cs",
-              "ToolTip": "C:\\Users\\Jonas\\Documents\\hantelbank\\scripts\\Main.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\hantelbank\\scripts\\Main.cs",
               "RelativeToolTip": "scripts\\Main.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-28T09:53:58.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-28T09:53:58.901Z"
             }
           ]
         }
