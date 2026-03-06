@@ -14,7 +14,7 @@ public partial class MousePassthroughManager : Node3D
 
     public override void _Process(double delta)
     {
-        var mousePos = GetViewport().GetMousePosition();
+        var mousePos = _windowManager.GetMausPosition();
         var camera = GetViewport().GetCamera3D();
 
 
