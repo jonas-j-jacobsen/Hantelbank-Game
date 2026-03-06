@@ -24,7 +24,7 @@ public partial class SenderTester : Area3D
             if (mouseEvent.ButtonIndex == MouseButton.Left && mouseEvent.Pressed)
             {
 
-                _webSocketManager.SendeBild("01", _meinImage.GetImage());
+                _webSocketManager.SendeBild("01", _meinImage.GetImage() , new Vector3(0,0,0), new Vector3(5, 0, 0), new Vector3(0, 0, 0));
 
             }
         }

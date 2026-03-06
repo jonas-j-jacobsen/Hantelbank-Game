@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class PlaneTester : RigidBody3D
+public partial class Papierflugzeug : RigidBody3D
 {
     [Export] public float Schub = 5f;
     [Export] public float Auftrieb = 2f;

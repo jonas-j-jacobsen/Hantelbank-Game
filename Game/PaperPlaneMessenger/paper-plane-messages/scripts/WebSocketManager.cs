@@ -11,7 +11,7 @@ public partial class WebSocketManager : Node
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
 
-    [Signal] public delegate void BildErhaltenEventHandler(string senderName, ImageTexture texture);
+    [Signal] public delegate void BildErhaltenEventHandler(string senderName, ImageTexture texture, float positionY, float velocityX, float velocityY, float rotationZ);
     [Signal] public delegate void VerbundenEventHandler();
 
     public async void Verbinden(string userId)
@@ -37,17 +37,28 @@ public partial class WebSocketManager : Node
                     CancellationToken.None);
 
                 var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                var data = JsonSerializer.Deserialize<Dictionary<string, string>>(json);
+                GD.Print("Empfangen: " + json); // Debug
+
+                var doc = System.Text.Json.JsonDocument.Parse(json);
+                var root = doc.RootElement;
 
                 await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 
-                if (data["type"] == "image")
+                if (root.GetProperty("type").GetString() == "image")
                 {
-                    var bytes = System.Convert.FromBase64String(data["image_data"]);
+                    var bytes = System.Convert.FromBase64String(
+                        root.GetProperty("image_data").GetString());
                     var image = new Image();
                     image.LoadPngFromBuffer(bytes);
                     var texture = ImageTexture.CreateFromImage(image);
-                    EmitSignal(SignalName.BildErhalten, data["sender"], texture);
+
+                    float posY = root.GetProperty("position_y").GetSingle();
+                    float velX = root.GetProperty("velocity_x").GetSingle();
+                    float velY = root.GetProperty("velocity_y").GetSingle();
+                    float rotZ = root.GetProperty("rotation_z").GetSingle();
+                    string sender = root.GetProperty("sender").GetString();
+
+                    EmitSignal(SignalName.BildErhalten, sender, texture, posY, velX, velY, rotZ);
                 }
             }
             catch (System.Exception e)
@@ -58,7 +69,7 @@ public partial class WebSocketManager : Node
         }
     }
 
-    public async void SendeBild(string targetId, Image image)
+    public async void SendeBild(string targetId, Image image, Vector3 position, Vector3 velocity, Vector3 rotation)
     {
         if (Ws.State != WebSocketState.Open) return;
 
@@ -68,8 +79,14 @@ public partial class WebSocketManager : Node
         var message = JsonSerializer.Serialize(new
         {
             target_id = targetId,
-            image_data = base64
+            image_data = base64,
+            position_y = position.Y,
+            velocity_x = velocity.X,
+            velocity_y = velocity.Y,
+            rotation_z = rotation.Z
         });
+
+        GD.Print("Sende: " + message);// message.Substring(0, 100)); // ersten 100 Zeichen prüfen
 
         var buffer = Encoding.UTF8.GetBytes(message);
         await Ws.SendAsync(

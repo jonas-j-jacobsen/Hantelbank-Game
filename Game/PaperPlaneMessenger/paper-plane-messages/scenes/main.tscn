@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://daryf7q1tkaiw" path="res://scripts/WIP/ConnectionTester.cs" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://cc2t2ki0cqc58" path="res://scripts/WIP/SenderTester.cs" id="2_jyhfs"]
 [ext_resource type="Texture2D" uid="uid://bytiqw358stwf" path="res://icon.svg" id="2_sugp2"]
-[ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/WIP/RecieverTester.cs" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/WIP/FlugzeugSpawner.cs" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bnavc6hp6auh4" path="res://scenes/papierflugzeug.tscn" id="5_tbgi4"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sgp6g"]
@@ -43,7 +43,7 @@ shape = SubResource("ConcavePolygonShape3D_o5qli")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0010015965, 0.30375785, 2.4431136)
 projection = 1
 fov = 72.0
-size = 3.688
+size = 3.7
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=44420251]
 transform = Transform3D(1, 0, 0, 0, 0.6699214, 0.742432, 0, -0.742432, 0.6699214, 0, 0, 0)
@@ -51,9 +51,11 @@ transform = Transform3D(1, 0, 0, 0, 0.6699214, 0.742432, 0, -0.742432, 0.6699214
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1047455808]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89621526, -0.68717384)
 script = ExtResource("3_jyhfs")
+FlugzeugScene = ExtResource("5_tbgi4")
 
 [node name="Papierflugzeug" parent="." unique_id=2075262908 instance=ExtResource("5_tbgi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.7752373, -0.31173635, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5116882, -1.3473942, 0)
+Schub = 0.0
 
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=1705217321]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5646912, 0)

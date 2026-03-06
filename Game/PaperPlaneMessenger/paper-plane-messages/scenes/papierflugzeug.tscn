@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnavc6hp6auh4"]
 
-[ext_resource type="Script" uid="uid://cbtain0ecuhie" path="res://scripts/WIP/PlaneTester.cs" id="1_2cpuu"]
+[ext_resource type="Script" uid="uid://cbtain0ecuhie" path="res://scripts/Papierflugzeug.cs" id="1_2cpuu"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tbgi4"]
 points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
