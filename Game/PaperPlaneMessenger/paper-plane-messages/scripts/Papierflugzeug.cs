@@ -8,14 +8,35 @@ public partial class Papierflugzeug : RigidBody3D
     [Export] public float Nickrate = 3f;
     [Export] public float WurfStärke = 10f;
 
+
+    private bool _außerhalbBildschirm = false;
+    private float _außerhalbTimer = 0f;
+    private const float TIMEOUT = 5f;
+
+
+
     private bool _gehalten = false;
     private Camera3D _kamera;
 
-    [Export] public NodePath MeshPfad; 
-    private Node3D _mesh;
+    [Export] 
+    public NodePath MeshPfad; 
+    private Node3D _meshGimbal;
     
+
+
     private float _schwankTimer = 0f;
-    private float _letzterSchwankWinkel = 0f;  
+    private float _letzterSchwankWinkel = 0f;
+
+
+    WebSocketManager _webSocketManager;
+
+    [Export]
+    Texture2D _meinImage;
+
+    private bool _amBoden = false;
+
+
+   
 
     public override void _Ready()
     { 
@@ -25,9 +46,18 @@ public partial class Papierflugzeug : RigidBody3D
         AxisLockAngularY = true;
         AxisLockLinearZ = true;
 
-        _mesh = GetNode<Node3D>(MeshPfad);
+        _meshGimbal = GetNode<Node3D>(MeshPfad);
 
         _kamera = GetViewport().GetCamera3D();
+        _webSocketManager = GetNode<WebSocketManager>("/root/WebSocketManager");
+
+
+        ContactMonitor = true;
+        MaxContactsReported = 4;
+
+        BodyEntered += OnBodyEntered;
+        BodyExited += OnBodyExited;
+
     }
 
     public override void _Input(InputEvent @event)
@@ -66,15 +96,68 @@ public partial class Papierflugzeug : RigidBody3D
     }
 
 
+    private void OnBodyEntered(Node body)
+    {
+        if (body is StaticBody3D)
+        {
+            _amBoden = true;
+           
+        }
+    }
+
+    private void OnBodyExited(Node body)
+    {
+        if (body is StaticBody3D)
+        {
+            _amBoden = false;
+            
+        }
+    }
+
     public override void _Process(double delta)
     {
-        if (_mesh == null) return;
+        if (_meshGimbal == null) return;
+
+        #region In screen check
+        var screenPos = _kamera.UnprojectPosition(GlobalPosition);
+        var screenSize = GetViewport().GetVisibleRect().Size;
+
+        bool rechts = screenPos.X > screenSize.X;
+        bool links = screenPos.X < 0;
+        bool oben = screenPos.Y < 0;
+        bool unten = screenPos.Y > screenSize.Y;
+
+        bool außerhalb = rechts || links || oben || unten;
+
+        if (rechts && !_außerhalbBildschirm)
+        {
+            RechtenRandVerlassen();
+        }
+
+        if (außerhalb)
+        {
+
+            _außerhalbBildschirm = true;
+            _außerhalbTimer += (float)delta;
+
+            if (_außerhalbTimer >= TIMEOUT)
+            {
+                _außerhalbTimer = 0f;
+                TimeoutAußerhalb();
+            }
+        }
+        else
+        {
+            _außerhalbBildschirm = false;
+            _außerhalbTimer = 0f;
+        }
+        #endregion
 
         float geschwindigkeit = LinearVelocity.Length();
 
         if (_gehalten)
         {
-            _mesh.Rotation = new Vector3(0, 0, 0);
+            _meshGimbal.Rotation = new Vector3(0, 0, 0);
             return;
         }
 
@@ -82,8 +165,8 @@ public partial class Papierflugzeug : RigidBody3D
         {
             float zielNeigung = _letzterSchwankWinkel >= 0 ?
                 Mathf.DegToRad(45f) : Mathf.DegToRad(-45f);
-            _mesh.Rotation = new Vector3(
-                Mathf.LerpAngle(_mesh.Rotation.X, zielNeigung, 0.1f),
+            _meshGimbal.Rotation = new Vector3(
+                Mathf.LerpAngle(_meshGimbal.Rotation.X, zielNeigung, 0.1f),
                 0, 0);
             return;
         }
@@ -95,7 +178,10 @@ public partial class Papierflugzeug : RigidBody3D
         float schwankWinkel = Mathf.Sin(_schwankTimer) * schwankStärke;
         _letzterSchwankWinkel = schwankWinkel;
 
-        _mesh.Rotation = new Vector3(schwankWinkel, 0, 0);
+        _meshGimbal.Rotation = new Vector3(schwankWinkel, 0, 0);
+
+
+       
     }
 
 
@@ -113,15 +199,20 @@ public partial class Papierflugzeug : RigidBody3D
 
             LinearVelocity = (zielPos - GlobalPosition) * 10f;
 
-            if (LinearVelocity.Length() > 0.1f)
+            // Nur rotieren wenn schnell genug
+            if (LinearVelocity.Length() > 0.5f)
             {
-                float halteWinkel = Mathf.Atan2(LinearVelocity.Y, LinearVelocity.X); // umbenannt
-                float halteDifferenz = halteWinkel - Rotation.Z; // umbenannt
+                float halteWinkel = Mathf.Atan2(LinearVelocity.Y, LinearVelocity.X);
+                float halteDifferenz = halteWinkel - Rotation.Z;
 
                 while (halteDifferenz > Mathf.Pi) halteDifferenz -= Mathf.Tau;
                 while (halteDifferenz < -Mathf.Pi) halteDifferenz += Mathf.Tau;
 
                 AngularVelocity = new Vector3(0, 0, halteDifferenz * Nickrate * 10f);
+            }
+            else
+            {
+                AngularVelocity = Vector3.Zero;
             }
             return;
         }
@@ -129,9 +220,10 @@ public partial class Papierflugzeug : RigidBody3D
         float f = (float)delta;
         float geschwindigkeit = LinearVelocity.Length();
 
-        if (geschwindigkeit < 0.5f)
+        if (_amBoden)//geschwindigkeit < 0.5f)
         {
             AngularVelocity = Vector3.Zero;
+            //LinearVelocity = Vector3.Zero; // NEU - stoppt auch das Rutschen
             return;
         }
 
@@ -150,5 +242,23 @@ public partial class Papierflugzeug : RigidBody3D
         while (winkelDifferenz < -Mathf.Pi) winkelDifferenz += Mathf.Tau;
 
         AngularVelocity = new Vector3(0, 0, winkelDifferenz * Nickrate * 10f);
+
     }
+
+
+    private void RechtenRandVerlassen()
+    {
+
+        _webSocketManager.SendeBild("01", _meinImage.GetImage(), Position, LinearVelocity, Rotation);
+        QueueFree();
+    }
+
+
+    private void TimeoutAußerhalb()
+    {
+
+        Position = new Vector3(0,0,0);
+    }
+
+
 }

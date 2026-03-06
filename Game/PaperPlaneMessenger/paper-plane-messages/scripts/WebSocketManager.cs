@@ -37,7 +37,7 @@ public partial class WebSocketManager : Node
                     CancellationToken.None);
 
                 var json = Encoding.UTF8.GetString(buffer, 0, result.Count);
-                GD.Print("Empfangen: " + json); // Debug
+              
 
                 var doc = System.Text.Json.JsonDocument.Parse(json);
                 var root = doc.RootElement;
@@ -86,7 +86,6 @@ public partial class WebSocketManager : Node
             rotation_z = rotation.Z
         });
 
-        GD.Print("Sende: " + message);// message.Substring(0, 100)); // ersten 100 Zeichen prüfen
 
         var buffer = Encoding.UTF8.GetBytes(message);
         await Ws.SendAsync(

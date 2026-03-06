@@ -9,8 +9,11 @@ public partial class ConnectionTester : Area3D
 
     public override void _Ready()
     {
-        _webSocketManager = GetNode<WebSocketManager>("/root/WebSocketManager");
-        InputEvent += OnInputEvent;
+           _webSocketManager = GetNode<WebSocketManager>("/root/WebSocketManager");
+        _webSocketManager.Verbinden("01");
+
+        //   InputEvent += OnInputEvent;
+
     }
 
 

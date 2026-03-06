@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bnavc6hp6auh4"]
 
 [ext_resource type="Script" uid="uid://cbtain0ecuhie" path="res://scripts/Papierflugzeug.cs" id="1_2cpuu"]
+[ext_resource type="Texture2D" uid="uid://bytiqw358stwf" path="res://icon.svg" id="2_268v5"]
+[ext_resource type="ArrayMesh" uid="uid://dkdfn273x5ktv" path="res://Assets/PaperPlane.obj" id="3_776m6"]
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tbgi4"]
-points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_776m6"]
+cull_mode = 2
 
-[sub_resource type="PrismMesh" id="PrismMesh_jyhfs"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_v5sfe"]
+points = PackedVector3Array(0.21347141, -0.020701397, 0.30171427, 0.21347141, -0.030121665, 0.30171427, -0.2108143, -0.030121665, 0.30171427, 0.006021616, -0.09610414, 0.26397046, 0.006021616, -0.011270978, -0.28281283, 0.053159855, 0.0075797066, 0.30171427, 0.006021616, 0.0075797066, -0.30171427, -0.05988886, 0.0075797066, 0.30171427, -0.163593, -0.030121665, 0.14140642, -0.163593, -0.011270978, 0.14140642, -0.0033229692, -0.09610414, 0.30171427, 0.16629164, -0.030121665, 0.15085714, -0.031605914, -0.011270978, -0.23567736, -0.031605914, 0.0075797066, -0.23567736, 0.03430456, 0.0075797066, -0.2262857, -0.0033229692, -0.09610414, 0.26397046, -0.2108143, -0.020701397, 0.30171427, 0.16629164, -0.011270978, 0.17909116, 0.21347141, -0.030121665, 0.28281283, 0.043732207, -0.011270978, -0.20738426, -0.2108143, -0.030121665, 0.28281283, -0.0033229692, -0.08667372, 0.19799261, 0.006021616, -0.08667372, 0.19799261, 0.21347141, -0.020701397, 0.28281283, -0.012750617, -0.0018405616, -0.29226354, -0.11645475, -0.0018405616, 0.28281283, -0.0033229692, -0.011270978, -0.28281283, 0.006021616, -0.09610414, 0.30171427, 0.16629164, -0.011270978, 0.30171427, -0.05988886, -0.0018405616, -0.16024879, 0.043732207, -0.0018405616, -0.20738426, -0.05988886, 0.0075797066, 0.25451973)
 
 [node name="Papierflugzeug" type="RigidBody3D" unique_id=2075262908]
 axis_lock_linear_z = true
@@ -17,13 +20,15 @@ script = ExtResource("1_2cpuu")
 Auftrieb = 3.0
 Luftwiderstand = 1.0
 MeshPfad = NodePath("MeshGimbal")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=976808979]
-transform = Transform3D(-8.5376515e-09, 0, 0.1953187, 0, 0.1953187, 0, -0.1953187, 0, -8.5376515e-09, 0, 0, 0)
-shape = SubResource("ConvexPolygonShape3D_tbgi4")
+_meinImage = ExtResource("2_268v5")
 
 [node name="MeshGimbal" type="Node3D" parent="." unique_id=318485393]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshGimbal" unique_id=1768420301]
-transform = Transform3D(-8.5376515e-09, 0, 0.1953187, 0, 0.1953187, 0, -0.1953187, 0, -8.5376515e-09, 0, 0, 0)
-mesh = SubResource("PrismMesh_jyhfs")
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.00010495633, 0, 0)
+mesh = ExtResource("3_776m6")
+surface_material_override/0 = SubResource("StandardMaterial3D_776m6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=505831564]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_v5sfe")

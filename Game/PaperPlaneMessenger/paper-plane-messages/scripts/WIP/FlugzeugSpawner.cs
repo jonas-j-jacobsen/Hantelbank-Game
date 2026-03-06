@@ -34,11 +34,11 @@ public partial class FlugzeugSpawner : Node
         flieger.LinearVelocity = new Vector3(velocityX, velocityY, 0);
         flieger.Rotation = new Vector3(0, 0, rotationZ);
 
-        var mesh = flieger.GetNode<MeshInstance3D>("MeshInstance3D");
+      /*  var mesh = flieger.GetNode<MeshInstance3D>("MeshInstance3D");
         var material = new StandardMaterial3D();
         material.AlbedoTexture = texture;
         mesh.MaterialOverride = material;
+        */
 
-        GD.Print($"Flieger gespawnt bei: {flieger.GlobalPosition}");
     }
 }
