@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bnavc6hp6auh4"]
+
+[ext_resource type="Script" uid="uid://cbtain0ecuhie" path="res://scripts/WIP/PlaneTester.cs" id="1_2cpuu"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_tbgi4"]
+points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="PrismMesh" id="PrismMesh_jyhfs"]
+
+[node name="Papierflugzeug" type="RigidBody3D" unique_id=2075262908]
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+mass = 0.015
+continuous_cd = true
+script = ExtResource("1_2cpuu")
+Auftrieb = 3.0
+Luftwiderstand = 1.0
+MeshPfad = NodePath("MeshGimbal")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=976808979]
+transform = Transform3D(-8.5376515e-09, 0, 0.1953187, 0, 0.1953187, 0, -0.1953187, 0, -8.5376515e-09, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_tbgi4")
+
+[node name="MeshGimbal" type="Node3D" parent="." unique_id=318485393]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshGimbal" unique_id=1768420301]
+transform = Transform3D(-8.5376515e-09, 0, 0.1953187, 0, 0.1953187, 0, -0.1953187, 0, -8.5376515e-09, 0, 0, 0)
+mesh = SubResource("PrismMesh_jyhfs")

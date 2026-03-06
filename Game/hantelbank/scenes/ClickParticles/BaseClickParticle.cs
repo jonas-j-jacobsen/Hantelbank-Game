@@ -10,7 +10,7 @@ public partial class BaseClickParticle : Node3D
 
 	public override void _Process(double delta)
 	{
-		Position += new Vector3(0, 1f * (float)delta, -.5f * (float)delta);
+		Position += new Vector3(0, .3f * (float)delta, -.5f * (float)delta);
 		lifetime -= delta;
 
 
@@ -34,7 +34,7 @@ public partial class BaseClickParticle : Node3D
 	public void setUpText(string text)
 	{
         Label.Text = text;
-		Label.Modulate = new Color(0f,.99f,0.26f, 1);
-		Label.FontSize = 18;	
+		//Label.Modulate = new Color(.99f, 0f,0.26f, 1);
+		Label.FontSize = 12;	
     }
 }

@@ -1,0 +1,15 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ycr1nep37i0j"]
+
+[resource]
+transparency = 1
+albedo_color = Color(0.88305265, 0, 0.22351253, 0.95686275)
+metallic = 0.15
+roughness = 0.3
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.8
+subsurf_scatter_transmittance_enabled = true
+subsurf_scatter_transmittance_color = Color(1, 0.6755892, 0.67936385, 1)
+subsurf_scatter_transmittance_depth = 0.001
+backlight_enabled = true
+backlight = Color(0.3943528, 0.39435276, 0.39435276, 1)
+grow_amount = 0.234

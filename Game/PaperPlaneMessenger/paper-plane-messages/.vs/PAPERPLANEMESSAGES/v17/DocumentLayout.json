@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\PlaneTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\WIP\\PlaneTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|c:\\users\\deep sky\\documents\\jonasminigames\\hantelgame\\hantelbank-game\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\wip\\sendertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\wip\\sendertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\wip\\recievertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\wip\\recievertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|c:\\users\\deep sky\\documents\\jonasminigames\\hantelgame\\hantelbank-game\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\wip\\connectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\wip\\connectiontester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\ConnectionTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\ConnectionTester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\MousePassthroughManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlaneTester.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\PlaneTester.cs",
+              "RelativeDocumentMoniker": "scripts\\WIP\\PlaneTester.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\PlaneTester.cs",
+              "RelativeToolTip": "scripts\\WIP\\PlaneTester.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAA3wDwAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:51:30.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SenderTester.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\SenderTester.cs",
+              "RelativeDocumentMoniker": "scripts\\WIP\\SenderTester.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\SenderTester.cs",
+              "RelativeToolTip": "scripts\\WIP\\SenderTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:22:02.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConnectionTester.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\ConnectionTester.cs",
+              "RelativeDocumentMoniker": "scripts\\WIP\\ConnectionTester.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\ConnectionTester.cs",
+              "RelativeToolTip": "scripts\\WIP\\ConnectionTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:19:38.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecieverTester.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\RecieverTester.cs",
+              "RelativeDocumentMoniker": "scripts\\WIP\\RecieverTester.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WIP\\RecieverTester.cs",
+              "RelativeToolTip": "scripts\\WIP\\RecieverTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T14:15:03.483Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebSocketManager.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
+              "RelativeDocumentMoniker": "scripts\\WebSocketManager.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
+              "RelativeToolTip": "scripts\\WebSocketManager.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwC8AAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T13:53:26.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConnectionTester.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\ConnectionTester.cs",
+              "RelativeDocumentMoniker": "scenes\\ConnectionTester.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\ConnectionTester.cs",
+              "RelativeToolTip": "scenes\\ConnectionTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T13:46:07.33Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MousePassthroughManager.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
+              "RelativeDocumentMoniker": "scripts\\MousePassthroughManager.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
+              "RelativeToolTip": "scripts\\MousePassthroughManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T12:54:48.773Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WindowManager.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WindowManager.cs",
+              "RelativeDocumentMoniker": "scripts\\WindowManager.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\JonasMinigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WindowManager.cs",
+              "RelativeToolTip": "scripts\\WindowManager.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAkwEMAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T12:50:19.639Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

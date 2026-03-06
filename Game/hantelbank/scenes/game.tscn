@@ -6,7 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://b0ofm75inkn05" path="res://scenes/ClickParticles/BaseClickParticle.tscn" id="4_iywne"]
 [ext_resource type="Material" uid="uid://rrlqe03r3kx0" path="res://Assets/Materials/M_PBR_MetallRod.tres" id="5_p57ef"]
 [ext_resource type="Texture2D" uid="uid://djt5xvl1gy32s" path="res://Assets/Materials/Textures/crossfit_gym_4k.hdr" id="7_u5sy4"]
+[ext_resource type="Material" uid="uid://ycr1nep37i0j" path="res://Assets/Materials/Baloon.tres" id="8_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://bmjc1ow33pjkb" path="res://scenes/Weights/Globe.tscn" id="8_gee14"]
+[ext_resource type="ArrayMesh" uid="uid://caeeu5y2c1ad1" path="res://Assets/Models/Hearth.obj" id="9_vtaks"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_e2o6t"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -30,19 +32,29 @@ script = ExtResource("1_lnu2h")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 6.106)
 fov = 33.8
 
-[node name="Area3D" type="Area3D" parent="." unique_id=1281331004]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4516767, 0)
+[node name="Area3D" type="Area3D" parent="." unique_id=1281331004 node_paths=PackedStringArray("_heart")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14745563, 0)
 script = ExtResource("2_lbhrr")
+_heart = NodePath("Hearth")
+BobHeight = 0.01
+BobSpeed = 0.5
+RotationAmount = 0.1
 TestWeight = ExtResource("8_gee14")
 clickParticle = ExtResource("4_iywne")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=663214162]
 transform = Transform3D(0.9999928, 0.003079287, -0.0022132888, -0.0030751557, 0.99999356, 0.0018632201, 0.0022190253, -0.0018563844, 0.9999958, 0, 0, 0)
+visible = false
 material_override = ExtResource("5_p57ef")
 mesh = ExtResource("3_iywne")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2048618968]
 shape = SubResource("ConcavePolygonShape3D_e2o6t")
+
+[node name="Hearth" type="MeshInstance3D" parent="Area3D" unique_id=733518652]
+transform = Transform3D(0.100847475, 0, 0, 0, 0.100847475, 0, 0, 0, 0.100847475, 0, 0.047058016, 0)
+material_override = ExtResource("8_0tnpc")
+mesh = ExtResource("9_vtaks")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1021032722]
 transform = Transform3D(0.8492804, -0.35487083, 0.3908826, -0.26026672, 0.362739, 0.8948081, -0.45932978, -0.861677, 0.21570611, 0.36904043, 0.08559203, 1.1920929e-07)

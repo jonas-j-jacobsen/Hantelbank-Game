@@ -14,7 +14,21 @@ public partial class ClickableObject : Area3D
     public int mediumLoop;
     public int smallLoop;
 
-   [Export]
+    [Export]
+    public Node3D _heart;
+
+    [Export] public float BobHeight = 0.2f;      // Wie hoch er schwebt
+    [Export] public float BobSpeed = 1.5f;        // Wie schnell er schwebt
+    [Export] public float RotationAmount = 0.05f; // Wie stark er sich dreht
+    [Export] public float RotationSpeed = 0.8f;   // Wie schnell er sich dreht
+
+    private Vector3 _startPosition;
+    private float _timeOffset;
+
+
+
+
+    [Export]
     public PackedScene TestWeight { get; set; }
 
     [Export]
@@ -41,6 +55,10 @@ public partial class ClickableObject : Area3D
 
         defaultPosition = Position;
 
+
+        _startPosition = Position;
+        // Zufälliger Startpunkt damit mehrere Ballons nicht synchron sind
+        _timeOffset = (float)GD.RandRange(0f, Mathf.Tau);
 
 
         var timer = new Timer();
@@ -83,7 +101,21 @@ public partial class ClickableObject : Area3D
         _windowManager.SetClickThrough(!mausÜberObjekt);
         #endregion
 
-       
+
+        float time = (float)Time.GetTicksMsec() / 1000f + _timeOffset;
+
+        // Auf/Ab Bewegung
+        float bobOffset = Mathf.Sin(time * BobSpeed) * BobHeight;
+        _heart.Position = _startPosition + new Vector3(0, bobOffset, 0);
+
+        // Leichte Rotation (X und Z für organisches Schaukeln)
+        _heart.Rotation = new Vector3(
+            Mathf.Sin(time * RotationSpeed * 0.7f) * RotationAmount,
+            Rotation.Y, // Y-Rotation unangetastet lassen
+            Mathf.Sin(time * RotationSpeed) * RotationAmount
+        );
+
+
     }
 
 
@@ -152,10 +184,11 @@ public partial class ClickableObject : Area3D
 
         var pInstance = clickParticle.Instantiate<BaseClickParticle>();
         GetTree().Root.AddChild(pInstance);
-        pInstance.Position = this.Position + new Vector3((float)GD.RandRange(-1.5f,-1.3f),0,1);
+        pInstance.Position = this.Position + new Vector3((float)GD.RandRange(-.1f,.1f),_heart.Position.Y,-3);
         pInstance.setUpNumber(clicksToDo - smallLoop);
-        pInstance.setUpText("xXstarke_maus420Xx : +1");
+        pInstance.setUpText("xXmausXx denkt an dich");
 
+        _heart.Scale += new Vector3(.001f, .001f, .001f);
 
         if (smallLoop >= clicksToDo)
         {
@@ -173,7 +206,7 @@ public partial class ClickableObject : Area3D
 
         //GD.Print("sL: " + smallLoop, ", mL: " + mediumLoop + ", bL: " + bigLoop);
 
-        Position = new Vector3(defaultPosition.X, Mathf.Lerp(defaultPosition.Y, defaultPosition.Y + targetY, (float)smallLoop / clicksToDo), defaultPosition.Z);
+        //new Vector3(defaultPosition.X, Mathf.Lerp(defaultPosition.Y, defaultPosition.Y + targetY, (float)smallLoop / clicksToDo), defaultPosition.Z);
     }
 
 
