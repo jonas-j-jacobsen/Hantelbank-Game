@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://daryf7q1tkaiw" path="res://scripts/WIP/ConnectionTester.cs" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/WIP/FlugzeugSpawner.cs" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bnavc6hp6auh4" path="res://scenes/papierflugzeug.tscn" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://di40ih2bqyfb8" path="res://scripts/RechteWand.cs" id="5_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c5x0g0kn4km33" path="res://scenes/PaperUI.tscn" id="6_o6xl0"]
 [ext_resource type="Script" uid="uid://dmm6n1s13ieq5" path="res://scripts/FloorPlanePositioner.cs" id="6_tefeu"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sgp6g"]
@@ -42,9 +44,18 @@ FlugzeugScene = ExtResource("5_tbgi4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5116882, -1.3473942, 0)
 Schub = 0.0
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1434034684]
+[node name="Floor" type="StaticBody3D" parent="." unique_id=1434034684]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5646912, 0)
 script = ExtResource("6_tefeu")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1971351953]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1971351953]
 shape = SubResource("ConcavePolygonShape3D_tefeu")
+
+[node name="RechteWand" type="StaticBody3D" parent="." unique_id=924703628]
+script = ExtResource("5_tefeu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RechteWand" unique_id=1456750359]
+transform = Transform3D(-4.371139e-06, -100, 0, 100, -4.371139e-06, 0, 0, 0, 100, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_tefeu")
+
+[node name="PaperUI" parent="." unique_id=394740697 instance=ExtResource("6_o6xl0")]

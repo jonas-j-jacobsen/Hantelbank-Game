@@ -9,6 +9,12 @@ public partial class Papierflugzeug : RigidBody3D
     [Export] public float WurfStärke = 10f;
 
 
+    public Image _image = Image.Create(512,512,false, Image.Format.Rgba8);
+    public string EmpfängerId { get; set; } = "01";
+    public string SenderId { get; set; } = null;
+
+
+
     private bool _außerhalbBildschirm = false;
     private float _außerhalbTimer = 0f;
     private const float TIMEOUT = 5f;
@@ -30,8 +36,8 @@ public partial class Papierflugzeug : RigidBody3D
 
     WebSocketManager _webSocketManager;
 
-    [Export]
-    Texture2D _meinImage;
+
+
 
     private bool _amBoden = false;
 
@@ -57,6 +63,8 @@ public partial class Papierflugzeug : RigidBody3D
 
         BodyEntered += OnBodyEntered;
         BodyExited += OnBodyExited;
+
+        AktualisiereRandKollision();
 
     }
 
@@ -92,7 +100,15 @@ public partial class Papierflugzeug : RigidBody3D
                     }
                 }
             }
+
+            if (mouseButton.ButtonIndex == MouseButton.Right && mouseButton.Pressed)
+            {
+                var paperUI = GetNode<PaperUI>("/root/Main/PaperUI/CanvasLayer/Control");
+                paperUI.ÖffneVonFlieger(this);
+            }
+
         }
+
     }
 
 
@@ -249,7 +265,7 @@ public partial class Papierflugzeug : RigidBody3D
     private void RechtenRandVerlassen()
     {
 
-        _webSocketManager.SendeBild("01", _meinImage.GetImage(), Position, LinearVelocity, Rotation);
+        _webSocketManager.SendeBild( EmpfängerId, _image, Position, LinearVelocity, Rotation);
         QueueFree();
     }
 
@@ -260,5 +276,20 @@ public partial class Papierflugzeug : RigidBody3D
         Position = new Vector3(0,0,0);
     }
 
+
+    public void SetEmpfänger(string id)
+    {
+        EmpfängerId = id;
+        AktualisiereRandKollision();
+    }
+
+    private void AktualisiereRandKollision()
+    {
+        // Rechte Wand suchen und aktivieren/deaktivieren
+        var rechteWand = GetNodeOrNull<StaticBody3D>("/root/Main/RechteWand");
+        if (rechteWand != null)
+            rechteWand.ProcessMode = EmpfängerId == null ?
+                ProcessModeEnum.Inherit : ProcessModeEnum.Disabled;
+    }
 
 }

@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://c5x0g0kn4km33"]
+
+[ext_resource type="Script" uid="uid://dskt3d5frflw4" path="res://scripts/PaperUI.cs" id="1_aekah"]
+[ext_resource type="Script" uid="uid://cqoo8qije882e" path="res://scripts/DrawingCanvas.cs" id="2_co4gf"]
+[ext_resource type="Script" uid="uid://dkdl6rjv7lqog" path="res://scripts/Toolbar.cs" id="3_fxxod"]
+[ext_resource type="Script" uid="uid://br77umm2kkj2o" path="res://scripts/EmpfängerListe.cs" id="4_sfr7a"]
+
+[node name="PaperUi" type="Node3D" unique_id=394740697]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=217604790]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1167461754]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 9.0
+offset_right = 8.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aekah")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1767117573]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DrawingCanvas" type="Control" parent="CanvasLayer/Control" unique_id=538991037]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 492.0
+offset_bottom = 492.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_co4gf")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/DrawingCanvas" unique_id=2119184272]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Toolbar" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1763367328]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_fxxod")
+
+[node name="Palette" type="HBoxContainer" parent="CanvasLayer/Control/Toolbar" unique_id=886969742]
+layout_mode = 2
+
+[node name="RundButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=1352075063]
+layout_mode = 2
+
+[node name="KreideButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=1547368576]
+layout_mode = 2
+
+[node name="RadiergummiButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=923639946]
+layout_mode = 2
+
+[node name="GrößeSlider" type="HSlider" parent="CanvasLayer/Control/Toolbar" unique_id=631511031]
+layout_mode = 2
+
+[node name="SenderLabel" type="Label" parent="CanvasLayer/Control" unique_id=1966729384]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmpfängerListe" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1422105142]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_sfr7a")
+
+[node name="HinzufügenButton" type="Button" parent="CanvasLayer/Control/EmpfängerListe" unique_id=871423127]
+layout_mode = 2
+
+[node name="Liste" type="ItemList" parent="CanvasLayer/Control/EmpfängerListe" unique_id=1337159003]
+layout_mode = 2
+
+[node name="SucheInput" type="LineEdit" parent="CanvasLayer/Control/EmpfängerListe" unique_id=2017442224]
+layout_mode = 2
+
+[node name="FaltenButton" type="Button" parent="CanvasLayer/Control" unique_id=1215222063]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="SpeichernButton" type="Button" parent="CanvasLayer/Control" unique_id=28261552]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="LadenButton" type="Button" parent="CanvasLayer/Control" unique_id=1305689572]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="SchliessenButton" type="Button" parent="CanvasLayer/Control" unique_id=541499130]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

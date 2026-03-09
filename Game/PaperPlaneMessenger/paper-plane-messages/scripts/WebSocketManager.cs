@@ -11,8 +11,22 @@ public partial class WebSocketManager : Node
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
 
+    public List<OnlinePlayer> OnlineSpieler { get; private set; } = new();
+
+    public class OnlinePlayer
+    {
+        public string UserId { get; set; }
+        public string Username { get; set; }
+    }
+
     [Signal] public delegate void BildErhaltenEventHandler(string senderName, ImageTexture texture, float positionY, float velocityX, float velocityY, float rotationZ);
     [Signal] public delegate void VerbundenEventHandler();
+    [Signal] public delegate void OnlineListeAktualisiertEventHandler();
+
+
+
+   
+
 
     public async void Verbinden(string userId)
     {
@@ -93,5 +107,18 @@ public partial class WebSocketManager : Node
             WebSocketMessageType.Text,
             true,
             CancellationToken.None);
+    }
+
+
+    // DUMMY - später implementieren
+    public void FavoritHinzufügen(string username)
+    {
+        // TODO
+    }
+
+    // DUMMY - später implementieren
+    private void AktualisiereOnlineListe()
+    {
+        // TODO
     }
 }
