@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public partial class WebSocketManager : Node
 {
-    private const string SERVER_URL = "ws://127.0.0.1:8000/ws/";
+    private const string SERVER_URL = "ws://192.168.2.151:8000/ws/";// "ws://127.0.0.1:8000/ws/";
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
 
