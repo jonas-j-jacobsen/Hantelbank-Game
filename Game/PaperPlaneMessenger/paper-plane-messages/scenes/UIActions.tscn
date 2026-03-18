@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dknvnboy5ibs5"]
+
+[node name="ControlActions" type="Control" unique_id=1502899468]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 320.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=821239870]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Speichern" type="Button" parent="HBoxContainer" unique_id=695256495]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Speichern"
+
+[node name="Laden" type="Button" parent="HBoxContainer" unique_id=1556926186]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Laden"
+
+[node name="Schließen" type="Button" parent="HBoxContainer" unique_id=1507143327]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Schließen"
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="HBoxContainer" unique_id=477466084]
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+
+[node name="Falten" type="Button" parent="HBoxContainer" unique_id=270207029]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+text = "Falten"

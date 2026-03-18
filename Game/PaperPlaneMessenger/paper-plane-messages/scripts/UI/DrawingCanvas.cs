@@ -30,6 +30,9 @@ public partial class DrawingCanvas : Control
 
     public void SetzeImage(Image image)
     {
+        if (image.GetWidth() != 512 || image.GetHeight() != 512)
+            image.Resize(512, 512, Image.Interpolation.Lanczos);
+
         _image = image;
         _texture = ImageTexture.CreateFromImage(_image);
         _display.Texture = _texture;
@@ -51,6 +54,12 @@ public partial class DrawingCanvas : Control
         {
             if (mb.ButtonIndex == MouseButton.Left)
                 _zeichnet = mb.Pressed;
+
+            if (mb.Pressed)
+            {
+                // Startposition setzen beim Ansetzen
+                _letztePos = mb.Position ;
+            }
         }
 
         if (lokalEvent is InputEventMouseMotion mm && _zeichnet)
@@ -69,6 +78,8 @@ public partial class DrawingCanvas : Control
             GD.Print("GlobalPosition: " + GlobalPosition);
             GD.Print("Size: " + Size);
         }
+
+
     }
 
     private void ZeichneLinie(Vector2 von, Vector2 bis)

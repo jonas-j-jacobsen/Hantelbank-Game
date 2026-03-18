@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://dkduyue2d3pym"]
+
+[ext_resource type="Script" uid="uid://br4cvc0wf501w" path="res://scripts/UI/FarbPalette.cs" id="1_1tbkg"]
+[ext_resource type="Texture2D" uid="uid://bytiqw358stwf" path="res://icon.svg" id="1_03rmg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_03rmg"]
+
+[node name="Base" type="Control" unique_id=1235049870]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -200.0
+offset_right = 113.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+script = ExtResource("1_1tbkg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=330941202]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_03rmg")
+
+[node name="Label" type="Label" parent="." unique_id=1089715081]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_top = 43.0
+offset_right = 28.0
+offset_bottom = 92.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+text = "Palette
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1202740198]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 122.0
+offset_right = 94.0
+offset_bottom = 390.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+columns = 3
+
+[node name="Button" type="Button" parent="GridContainer" unique_id=161007354]
+material = SubResource("CanvasItemMaterial_03rmg")
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button19" type="Button" parent="GridContainer" unique_id=1952745989]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button20" type="Button" parent="GridContainer" unique_id=948341874]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button21" type="Button" parent="GridContainer" unique_id=698453694]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button22" type="Button" parent="GridContainer" unique_id=215750589]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button23" type="Button" parent="GridContainer" unique_id=1766207789]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button24" type="Button" parent="GridContainer" unique_id=424884757]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="GridContainer" unique_id=1337137966]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="GridContainer" unique_id=829415965]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="GridContainer" unique_id=1321595677]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button5" type="Button" parent="GridContainer" unique_id=1649580574]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button6" type="Button" parent="GridContainer" unique_id=1382947609]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button7" type="Button" parent="GridContainer" unique_id=862777186]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button8" type="Button" parent="GridContainer" unique_id=389193958]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button9" type="Button" parent="GridContainer" unique_id=1550948171]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button10" type="Button" parent="GridContainer" unique_id=34020780]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button11" type="Button" parent="GridContainer" unique_id=888128371]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button12" type="Button" parent="GridContainer" unique_id=979834522]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button13" type="Button" parent="GridContainer" unique_id=685221317]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button14" type="Button" parent="GridContainer" unique_id=1588413824]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button15" type="Button" parent="GridContainer" unique_id=287238921]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button16" type="Button" parent="GridContainer" unique_id=382633491]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button17" type="Button" parent="GridContainer" unique_id=1445924742]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2
+
+[node name="Button18" type="Button" parent="GridContainer" unique_id=908786063]
+custom_minimum_size = Vector2(60, 30)
+layout_mode = 2

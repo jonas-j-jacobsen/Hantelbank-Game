@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dmqri20bh2esu"]
 
 [ext_resource type="Script" uid="uid://daryf7q1tkaiw" path="res://scripts/WIP/ConnectionTester.cs" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://2cbn6rxp2hol" path="res://scripts/Papierblock.cs" id="2_o6xl0"]
 [ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/WIP/FlugzeugSpawner.cs" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bnavc6hp6auh4" path="res://scenes/papierflugzeug.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://di40ih2bqyfb8" path="res://scripts/RechteWand.cs" id="5_tefeu"]
@@ -18,12 +19,25 @@ data = PackedVector3Array(7, 0, 1, -7, 0, 1, 7, 0, -1, -7, 0, 1, -7, 0, -1, 7, 0
 [node name="Main" type="Node3D" unique_id=1803123517]
 
 [node name="Area3D" type="Area3D" parent="." unique_id=408549901]
+visible = false
 script = ExtResource("1_o5qli")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1142656389]
+visible = false
 mesh = SubResource("SphereMesh_sgp6g")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1703295392]
+visible = false
+shape = SubResource("ConcavePolygonShape3D_o5qli")
+
+[node name="Block" type="Area3D" parent="." unique_id=2115588370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9710698, -1.7242286, 0)
+script = ExtResource("2_o6xl0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Block" unique_id=1588837391]
+mesh = SubResource("SphereMesh_sgp6g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Block" unique_id=70908134]
 shape = SubResource("ConcavePolygonShape3D_o5qli")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=861158921]

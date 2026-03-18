@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c30sh3n42isy4"]
+
+[ext_resource type="PackedScene" uid="uid://dkduyue2d3pym" path="res://scenes/Paletten/Base.tscn" id="1_8516h"]
+[ext_resource type="Texture2D" uid="uid://dywm0c153llyq" path="res://Assets/Paletten/Pastel_Test.png" id="2_t3441"]
+
+[node name="Base" unique_id=1235049870 instance=ExtResource("1_8516h")]
+
+[node name="TextureRect" parent="." index="0" unique_id=330941202]
+texture = ExtResource("2_t3441")
+
+[node name="Label" parent="." index="1" unique_id=1089715081]
+text = "Pastell"
+
+[node name="Button" parent="GridContainer" parent_id_path=PackedInt32Array(1202740198) index="0" unique_id=161007354]
+modulate = Color(0, 1, 1, 1)
+
+[node name="Button19" parent="GridContainer" parent_id_path=PackedInt32Array(1202740198) index="1" unique_id=1952745989]
+modulate = Color(1, 0, 1, 1)

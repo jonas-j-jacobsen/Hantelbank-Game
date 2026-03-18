@@ -72,43 +72,39 @@ public partial class Papierflugzeug : RigidBody3D
     {
         if (@event is InputEventMouseButton mouseButton)
         {
-            if (mouseButton.ButtonIndex == MouseButton.Left)
+            if (mouseButton.Pressed)
             {
-                if (mouseButton.Pressed)
-                {
-                    // Prüfen ob Flieger geklickt wurde
-                    var from = _kamera.ProjectRayOrigin(mouseButton.Position);
-                    var to = from + _kamera.ProjectRayNormal(mouseButton.Position) * 1000f;
-                    var spaceState = GetWorld3D().DirectSpaceState;
-                    var query = PhysicsRayQueryParameters3D.Create(from, to);
-                    var result = spaceState.IntersectRay(query);
+                // Einmal prüfen ob Flieger getroffen
+                var from = _kamera.ProjectRayOrigin(mouseButton.Position);
+                var to = from + _kamera.ProjectRayNormal(mouseButton.Position) * 1000f;
+                var spaceState = GetWorld3D().DirectSpaceState;
+                var query = PhysicsRayQueryParameters3D.Create(from, to);
+                query.CollideWithAreas = true;
+                var result = spaceState.IntersectRay(query);
 
-                    if (result.Count > 0 && result["collider"].AsGodotObject() == this)
+                if (result.Count > 0 && result["collider"].AsGodotObject() == this)
+                {
+                    if (mouseButton.ButtonIndex == MouseButton.Left)
                     {
                         _gehalten = true;
                         GravityScale = 0f;
                         LinearVelocity = Vector3.Zero;
                         AngularVelocity = Vector3.Zero;
                     }
-                }
-                else
-                {
-                    if (_gehalten)
+                    else if (mouseButton.ButtonIndex == MouseButton.Right)
                     {
-                        _gehalten = false;
-                        GravityScale = 1f;
+                        UIManager _uiManager = GetNode<UIManager>("/root/Main/PaperUI/CanvasLayer");
+                        _uiManager.SetzeUrsprung(GlobalPosition);
+                        _uiManager.AllesÖffnen();
                     }
                 }
             }
-
-            if (mouseButton.ButtonIndex == MouseButton.Right && mouseButton.Pressed)
+            else if (mouseButton.ButtonIndex == MouseButton.Left && _gehalten)
             {
-                var paperUI = GetNode<PaperUI>("/root/Main/PaperUI/CanvasLayer/Control");
-                paperUI.ÖffneVonFlieger(this);
+                _gehalten = false;
+                GravityScale = 1f;
             }
-
         }
-
     }
 
 

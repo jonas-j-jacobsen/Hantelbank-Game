@@ -1,28 +1,39 @@
 [gd_scene format=3 uid="uid://c5x0g0kn4km33"]
 
-[ext_resource type="Script" uid="uid://dskt3d5frflw4" path="res://scripts/PaperUI.cs" id="1_aekah"]
-[ext_resource type="Script" uid="uid://cqoo8qije882e" path="res://scripts/DrawingCanvas.cs" id="2_co4gf"]
-[ext_resource type="Script" uid="uid://dkdl6rjv7lqog" path="res://scripts/Toolbar.cs" id="3_fxxod"]
-[ext_resource type="Script" uid="uid://br77umm2kkj2o" path="res://scripts/EmpfängerListe.cs" id="4_sfr7a"]
+[ext_resource type="Script" uid="uid://i6dkp0tliurg" path="res://scripts/UIManager.cs" id="1_aekah"]
+[ext_resource type="Script" uid="uid://cqoo8qije882e" path="res://scripts/UI/DrawingCanvas.cs" id="2_co4gf"]
+[ext_resource type="Script" uid="uid://cf4r4jmd0pii8" path="res://scripts/UI/DraggablePanel.cs" id="2_mfgjd"]
+[ext_resource type="Script" uid="uid://d0waf0sb8vkdo" path="res://scripts/UI/PalettenCarousel.cs" id="4_sfr7a"]
+[ext_resource type="PackedScene" uid="uid://c30sh3n42isy4" path="res://scenes/Paletten/Pastell.tscn" id="5_co4gf"]
+[ext_resource type="PackedScene" uid="uid://dknvnboy5ibs5" path="res://scenes/UIActions.tscn" id="5_fxxod"]
+[ext_resource type="Script" uid="uid://bcpvmdjmtswfq" path="res://scripts/UI/AktionsBar.cs" id="6_fxxod"]
+[ext_resource type="PackedScene" uid="uid://dkduyue2d3pym" path="res://scenes/Paletten/Base.tscn" id="6_j281i"]
+[ext_resource type="Script" uid="uid://dkdl6rjv7lqog" path="res://scripts/UI/Toolbar.cs" id="7_h80pf"]
 
 [node name="PaperUi" type="Node3D" unique_id=394740697]
+metadata/_edit_horizontal_guides_ = [17.0]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=217604790]
-
-[node name="Control" type="Control" parent="CanvasLayer" unique_id=1167461754]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 8.0
-offset_top = 9.0
-offset_right = 8.0
-offset_bottom = 9.0
-grow_horizontal = 2
-grow_vertical = 2
 script = ExtResource("1_aekah")
 
-[node name="Panel" type="Panel" parent="CanvasLayer/Control" unique_id=1767117573]
+[node name="ControlEasel" type="Control" parent="CanvasLayer" unique_id=1167461754]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -255.0
+offset_top = -256.0
+offset_right = 257.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+script = ExtResource("2_mfgjd")
+
+[node name="Panel" type="Panel" parent="CanvasLayer/ControlEasel" unique_id=1767117573]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -36,115 +47,152 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="DrawingCanvas" type="Control" parent="CanvasLayer/Control" unique_id=538991037]
+[node name="EmpfängerListe" type="VBoxContainer" parent="CanvasLayer/ControlEasel" unique_id=1422105142]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_right = 123.0
+grow_vertical = 0
+
+[node name="HinzufügenButton" type="Button" parent="CanvasLayer/ControlEasel/EmpfängerListe" unique_id=871423127]
+layout_mode = 2
+text = "ADD"
+
+[node name="Liste" type="ItemList" parent="CanvasLayer/ControlEasel/EmpfängerListe" unique_id=1337159003]
+layout_mode = 2
+
+[node name="SucheInput" type="LineEdit" parent="CanvasLayer/ControlEasel/EmpfängerListe" unique_id=2017442224]
+layout_mode = 2
+placeholder_text = "Search..."
+
+[node name="DrawingCanvas" type="Control" parent="CanvasLayer/ControlEasel" unique_id=538991037]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 492.0
-offset_bottom = 492.0
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_co4gf")
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control/DrawingCanvas" unique_id=2119184272]
+[node name="SenderLabel" type="Label" parent="CanvasLayer/ControlEasel/DrawingCanvas" unique_id=1966729384]
 layout_mode = 1
+offset_right = 55.0
+offset_bottom = 23.0
+text = "Sender"
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/ControlEasel/DrawingCanvas" unique_id=2119184272]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BG" type="ColorRect" parent="CanvasLayer/ControlEasel/DrawingCanvas/TextureRect" unique_id=804048690]
+z_index = -100
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ControlToolbox" type="Control" parent="CanvasLayer" unique_id=1236982803]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = 294.0
+offset_top = -255.0
+offset_right = 546.0
+offset_bottom = 200.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("2_mfgjd")
 
-[node name="Toolbar" type="HBoxContainer" parent="CanvasLayer/Control" unique_id=1763367328]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("3_fxxod")
+[node name="BoxContainer" type="VBoxContainer" parent="CanvasLayer/ControlToolbox" unique_id=1798012725]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Palette" type="HBoxContainer" parent="CanvasLayer/Control/Toolbar" unique_id=886969742]
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/ControlToolbox/BoxContainer" unique_id=157233308]
+clip_contents = true
+custom_minimum_size = Vector2(200, 400)
 layout_mode = 2
-
-[node name="RundButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=1352075063]
-layout_mode = 2
-
-[node name="KreideButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=1547368576]
-layout_mode = 2
-
-[node name="RadiergummiButton" type="Button" parent="CanvasLayer/Control/Toolbar" unique_id=923639946]
-layout_mode = 2
-
-[node name="GrößeSlider" type="HSlider" parent="CanvasLayer/Control/Toolbar" unique_id=631511031]
-layout_mode = 2
-
-[node name="SenderLabel" type="Label" parent="CanvasLayer/Control" unique_id=1966729384]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="EmpfängerListe" type="VBoxContainer" parent="CanvasLayer/Control" unique_id=1422105142]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
+alignment = 1
 script = ExtResource("4_sfr7a")
 
-[node name="HinzufügenButton" type="Button" parent="CanvasLayer/Control/EmpfängerListe" unique_id=871423127]
+[node name="ZurückButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer" unique_id=1904856559]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "◀"
+
+[node name="PalettenHolder" type="Control" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer" unique_id=1330795767]
+clip_contents = true
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 
-[node name="Liste" type="ItemList" parent="CanvasLayer/Control/EmpfängerListe" unique_id=1337159003]
+[node name="Base" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer/PalettenHolder" unique_id=1235049870 instance=ExtResource("5_co4gf")]
+layout_mode = 1
+offset_left = -100.0
+offset_right = 100.0
+
+[node name="Base2" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer/PalettenHolder" unique_id=143665039 instance=ExtResource("6_j281i")]
+visible = false
+layout_mode = 1
+offset_left = -100.0
+offset_right = 100.0
+
+[node name="VorButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer" unique_id=837524318]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+text = "▶"
+
+[node name="ToolBox" type="VBoxContainer" parent="CanvasLayer/ControlToolbox/BoxContainer" unique_id=1404305071]
+layout_mode = 2
+script = ExtResource("7_h80pf")
+
+[node name="GrößeSlider" type="HSlider" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox" unique_id=631511031]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+max_value = 25.0
+step = 0.0
+value = 2.0
+
+[node name="Toolbar" type="HBoxContainer" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox" unique_id=1763367328]
 layout_mode = 2
 
-[node name="SucheInput" type="LineEdit" parent="CanvasLayer/Control/EmpfängerListe" unique_id=2017442224]
+[node name="RundButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=1352075063]
 layout_mode = 2
+text = "Rund"
 
-[node name="FaltenButton" type="Button" parent="CanvasLayer/Control" unique_id=1215222063]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="KreideButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=1547368576]
+layout_mode = 2
+text = "Kreide"
 
-[node name="SpeichernButton" type="Button" parent="CanvasLayer/Control" unique_id=28261552]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="RadiergummiButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=923639946]
+layout_mode = 2
+text = "Radierer
 
-[node name="LadenButton" type="Button" parent="CanvasLayer/Control" unique_id=1305689572]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+"
 
-[node name="SchliessenButton" type="Button" parent="CanvasLayer/Control" unique_id=541499130]
-layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+[node name="ControlActions" parent="CanvasLayer" unique_id=1502899468 instance=ExtResource("5_fxxod")]
+offset_left = -132.0
+offset_top = 261.0
+offset_right = 193.0
+offset_bottom = 311.0
+script = ExtResource("6_fxxod")

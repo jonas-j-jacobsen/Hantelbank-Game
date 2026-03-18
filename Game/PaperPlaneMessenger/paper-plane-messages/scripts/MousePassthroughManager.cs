@@ -4,18 +4,39 @@ using System;
 public partial class MousePassthroughManager : Node3D
 {
     private WindowManager _windowManager;
-
+    private Control[] _uiElemente;
 
     public override void _Ready()
     {
         _windowManager = GetNode<WindowManager>("/root/WindowManager");
+
+        _uiElemente = new Control[]
+    {
+        GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlEasel"),
+        GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlToolbox"),
+        GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlActions")
+    };
+        GD.Print(_uiElemente.Length);   
+        
     }
 
 
     public override void _Process(double delta)
     {
+
         var mousePos = _windowManager.GetMausPosition();
         var camera = GetViewport().GetCamera3D();
+
+
+        // Prüfen ob Maus über einem UI Element ist
+        foreach (var ui in _uiElemente)
+        {
+            if (ui != null && ui.Visible && ui.GetGlobalRect().HasPoint(mousePos))
+            {
+                _windowManager.SetClickThrough(false);
+                return;
+            }
+        }
 
 
         var spaceState = GetWorld3D().DirectSpaceState;
