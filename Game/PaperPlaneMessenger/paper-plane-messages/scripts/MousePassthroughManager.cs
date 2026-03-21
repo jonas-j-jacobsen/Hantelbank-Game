@@ -14,7 +14,11 @@ public partial class MousePassthroughManager : Node3D
     {
         GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlEasel"),
         GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlToolbox"),
-        GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlActions")
+        GetNodeOrNull<Control>("/root/Main/PaperUI/CanvasLayer/ControlActions"),
+        GetNodeOrNull<Control>("/root/Main/CanvasLayer/LoginPanel"),
+        GetNodeOrNull<Control>("/root/Main/CanvasLayer/UsernamePanel"),
+        GetNodeOrNull<Control>("/root/Main/CanvasLayer/LadePanel")
+
     };
         GD.Print(_uiElemente.Length);   
         

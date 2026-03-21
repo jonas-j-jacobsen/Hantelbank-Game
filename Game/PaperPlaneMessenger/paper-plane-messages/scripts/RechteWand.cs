@@ -13,6 +13,9 @@ public partial class RechteWand : StaticBody3D
         var weltPos = from + richtung * t;
 
         Position = new Vector3(weltPos.X, Position.Y, 0f);
-        
+
+        CollisionLayer = 2;
+        CollisionMask = 0;
+
     }
 }

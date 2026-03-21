@@ -10,7 +10,7 @@ public partial class Papierflugzeug : RigidBody3D
 
 
     public Image _image = Image.Create(512,512,false, Image.Format.Rgba8);
-    public string EmpfängerId { get; set; } = "01";
+    public string EmpfängerId { get; set; } = null  ;
     public string SenderId { get; set; } = null;
 
 
@@ -281,11 +281,18 @@ public partial class Papierflugzeug : RigidBody3D
 
     private void AktualisiereRandKollision()
     {
-        // Rechte Wand suchen und aktivieren/deaktivieren
-        var rechteWand = GetNodeOrNull<StaticBody3D>("/root/Main/RechteWand");
-        if (rechteWand != null)
-            rechteWand.ProcessMode = EmpfängerId == null ?
-                ProcessModeEnum.Inherit : ProcessModeEnum.Disabled;
+        if (EmpfängerId == null)
+        {
+            // Mit rechter Wand kollidieren
+            CollisionLayer = 1;
+            CollisionMask = 1 | 2;
+        }
+        else
+        {
+            // Rechte Wand ignorieren
+            CollisionLayer = 1;
+            CollisionMask = 1;
+        }
     }
 
 }

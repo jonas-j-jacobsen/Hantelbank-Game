@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://dmqri20bh2esu"]
 
-[ext_resource type="Script" uid="uid://daryf7q1tkaiw" path="res://scripts/WIP/ConnectionTester.cs" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://2cbn6rxp2hol" path="res://scripts/Papierblock.cs" id="2_o6xl0"]
-[ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/WIP/FlugzeugSpawner.cs" id="3_jyhfs"]
+[ext_resource type="Script" uid="uid://te7kmowdc03p" path="res://scripts/depricated/FlugzeugSpawner.cs" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://bnavc6hp6auh4" path="res://scenes/papierflugzeug.tscn" id="5_tbgi4"]
 [ext_resource type="Script" uid="uid://di40ih2bqyfb8" path="res://scripts/RechteWand.cs" id="5_tefeu"]
 [ext_resource type="PackedScene" uid="uid://c5x0g0kn4km33" path="res://scenes/PaperUI.tscn" id="6_o6xl0"]
 [ext_resource type="Script" uid="uid://dmm6n1s13ieq5" path="res://scripts/FloorPlanePositioner.cs" id="6_tefeu"]
+[ext_resource type="Script" uid="uid://bldsnhhpdehp8" path="res://scripts/UI/ConnectionUI.cs" id="7_tipki"]
+[ext_resource type="Script" uid="uid://cf4r4jmd0pii8" path="res://scripts/UI/DraggablePanel.cs" id="8_85g3d"]
+[ext_resource type="Script" uid="uid://don8gi2b7ef1e" path="res://scenes/FreundOnlinePopup.cs" id="9_85g3d"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sgp6g"]
 
@@ -16,19 +18,10 @@ data = PackedVector3Array(0, 0.5, 0, 0, 0.5, 0, 0, 0.49769998, 0.0475, 0, 0.5, 0
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tefeu"]
 data = PackedVector3Array(7, 0, 1, -7, 0, 1, 7, 0, -1, -7, 0, 1, -7, 0, -1, 7, 0, -1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_tipki"]
+font_size = 10
+
 [node name="Main" type="Node3D" unique_id=1803123517]
-
-[node name="Area3D" type="Area3D" parent="." unique_id=408549901]
-visible = false
-script = ExtResource("1_o5qli")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D" unique_id=1142656389]
-visible = false
-mesh = SubResource("SphereMesh_sgp6g")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1703295392]
-visible = false
-shape = SubResource("ConcavePolygonShape3D_o5qli")
 
 [node name="Block" type="Area3D" parent="." unique_id=2115588370]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9710698, -1.7242286, 0)
@@ -73,3 +66,190 @@ transform = Transform3D(-4.371139e-06, -100, 0, 100, -4.371139e-06, 0, 0, 0, 100
 shape = SubResource("ConcavePolygonShape3D_tefeu")
 
 [node name="PaperUI" parent="." unique_id=394740697 instance=ExtResource("6_o6xl0")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=170854323]
+script = ExtResource("7_tipki")
+
+[node name="LoginPanel" type="Control" parent="CanvasLayer" unique_id=365927495]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_85g3d")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/LoginPanel" unique_id=55936898]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/LoginPanel" unique_id=1736778700]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -90.5
+offset_right = 90.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Paper Plane Messenger"
+
+[node name="LoginButton" type="Button" parent="CanvasLayer/LoginPanel" unique_id=245305882]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mit Google einloggen"
+
+[node name="UsernamePanel" type="Control" parent="CanvasLayer" unique_id=701886810]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_85g3d")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/UsernamePanel" unique_id=325132027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/UsernamePanel" unique_id=1178398401]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.0
+offset_top = 10.0
+offset_right = 95.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "Wähle deinen Username"
+
+[node name="UsernameInput" type="LineEdit" parent="CanvasLayer/UsernamePanel" unique_id=399801699]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -100.0
+offset_top = 50.0
+offset_right = 100.0
+offset_bottom = 81.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+placeholder_text = "Enter Username..."
+
+[node name="BestätigenButton" type="Button" parent="CanvasLayer/UsernamePanel" unique_id=1524640728]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -50.0
+offset_top = 100.0
+offset_right = 41.0
+offset_bottom = 131.0
+grow_horizontal = 2
+pivot_offset_ratio = Vector2(0.5, 0)
+text = "Bestätigen
+"
+
+[node name="FehlerLabel" type="Label" parent="CanvasLayer/UsernamePanel" unique_id=1859536372]
+modulate = Color(1, 0, 0, 1)
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -125.0
+offset_top = 140.0
+offset_right = 125.0
+offset_bottom = 163.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_tipki")
+horizontal_alignment = 1
+
+[node name="LadePanel" type="Control" parent="CanvasLayer" unique_id=2038155751]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_85g3d")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/LadePanel" unique_id=1778501624]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LadeLabel" type="Label" parent="CanvasLayer/LadePanel" unique_id=1032969587]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -11.5
+offset_right = 95.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Connecting..."
+horizontal_alignment = 1
+
+[node name="FriendOnlineUI" type="CanvasLayer" parent="." unique_id=1753092825]
+
+[node name="Control" type="Control" parent="FriendOnlineUI" unique_id=1196560652]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -300.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("9_85g3d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FriendOnlineUI/Control" unique_id=702726188]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2

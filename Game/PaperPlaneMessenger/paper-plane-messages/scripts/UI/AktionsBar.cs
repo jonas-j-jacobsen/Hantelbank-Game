@@ -32,29 +32,35 @@ public partial class AktionsBar : DraggablePanel
     {
         _fileDialog.FileMode = FileDialog.FileModeEnum.SaveFile;
         _fileDialog.PopupCentered(new Vector2I(800, 600));
-        _fileDialog.FileSelected += OnSpeichernDateiGewählt;
-    }
+        GetNode<WindowManager>("/root/WindowManager").SetClickThrough(false);
 
-    private void OnSpeichernDateiGewählt(string pfad)
-    {
-        _fileDialog.FileSelected -= OnSpeichernDateiGewählt;
-        _canvas.GetImage().SavePng(pfad);
-        GD.Print("Gespeichert: " + pfad);
+        _fileDialog.FileSelected += OnSpeichernDateiGewählt;
+        _fileDialog.Canceled += () => GetNode<WindowManager>("/root/WindowManager").SetClickThrough(true);
     }
 
     private void OnLadenPressed()
     {
         _fileDialog.FileMode = FileDialog.FileModeEnum.OpenFile;
         _fileDialog.PopupCentered(new Vector2I(800, 600));
+        GetNode<WindowManager>("/root/WindowManager").SetClickThrough(false);
+
         _fileDialog.FileSelected += OnLadenDateiGewählt;
+        _fileDialog.Canceled += () => GetNode<WindowManager>("/root/WindowManager").SetClickThrough(true);
+    }
+
+    private void OnSpeichernDateiGewählt(string pfad)
+    {
+        _fileDialog.FileSelected -= OnSpeichernDateiGewählt;
+        GetNode<WindowManager>("/root/WindowManager").SetClickThrough(true);
+        _canvas.GetImage().SavePng(pfad);
     }
 
     private void OnLadenDateiGewählt(string pfad)
     {
         _fileDialog.FileSelected -= OnLadenDateiGewählt;
+        GetNode<WindowManager>("/root/WindowManager").SetClickThrough(true);
         var image = Image.LoadFromFile(pfad);
         _canvas.SetzeImage(image);
-        GD.Print("Geladen: " + pfad);
     }
 
     private void OnFaltenPressed()

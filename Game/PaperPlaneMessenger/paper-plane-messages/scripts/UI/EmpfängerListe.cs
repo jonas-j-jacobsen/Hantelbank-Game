@@ -34,7 +34,7 @@ public partial class EmpfängerListe : VBoxContainer
     {
         var username = _sucheInput.Text.Trim();
         if (username == "") return;
-        _networkManager.FavoritHinzufügen(username);
+    //    _networkManager.FavoritHinzufügen(username);
         _sucheInput.Text = "";
     }
 

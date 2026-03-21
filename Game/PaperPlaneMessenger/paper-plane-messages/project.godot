@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 WindowManager="*uid://xeuehp5b2kqw"
 MousePassthroughManager="*uid://fuop4t3clvxe"
 WebSocketManager="*uid://dcqinwhfwy2yy"
+AuthManager="*uid://kpbeq7ptnbdu"
 
 [display]
 

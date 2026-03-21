@@ -28,9 +28,10 @@ public partial class UIManager : CanvasLayer
     {
         var kamera = GetViewport().GetCamera3D();
         _ursprung = kamera.UnprojectPosition(weltPos);
+        GD.Print("Ursprung gesetzt: " + _ursprung);
     }
 
-  
+
 
     public void AllesÖffnen()
     {
@@ -50,25 +51,26 @@ public partial class UIManager : CanvasLayer
 
     public void ÖffnePanel(Control panel)
     {
-        // Pivot auf Ursprung setzen damit es von dort aufgeht
-        panel.PivotOffset = _ursprung - panel.GlobalPosition;
+        var zielPosition = panel.Position;
+
         panel.Scale = Vector2.Zero;
+        panel.Position = _ursprung;
+        panel.PivotOffset = Vector2.Zero;
         panel.Visible = true;
 
         var tween = CreateTween();
+        tween.SetParallel(true);
         tween.SetEase(Tween.EaseType.Out);
         tween.SetTrans(Tween.TransitionType.Back);
         tween.TweenProperty(panel, "scale", Vector2.One, 0.4f);
-        tween.TweenCallback(Callable.From(() =>
-        {
-            // Pivot nach Öffnen zurück zur Mitte
-            panel.PivotOffset = panel.Size / 2f;
-        }));
+        tween.TweenProperty(panel, "position", zielPosition, 0.4f);
     }
+
 
     public void SchließePanel(Control panel)
     {
-        panel.PivotOffset = _ursprung - panel.GlobalPosition;
+        var localUrsprung = _ursprung - panel.GetGlobalRect().Position;
+        panel.PivotOffset = localUrsprung;
 
         var tween = CreateTween();
         tween.SetEase(Tween.EaseType.In);
@@ -77,6 +79,7 @@ public partial class UIManager : CanvasLayer
         tween.TweenCallback(Callable.From(() =>
         {
             panel.Visible = false;
+            panel.PivotOffset = panel.Size / 2f;
         }));
     }
 }
