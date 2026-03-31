@@ -23,7 +23,7 @@ public partial class DrawingCanvas : Control
     public void Leeren()
     {
         _image = Image.CreateEmpty(512, 512, false, Image.Format.Rgba8);
-        _image.Fill(Colors.White);
+        //  _image.Fill(1,1,1,0);
         _texture = ImageTexture.CreateFromImage(_image);
         _display.Texture = _texture;
     }

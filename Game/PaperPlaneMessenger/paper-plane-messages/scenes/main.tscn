@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://dmm6n1s13ieq5" path="res://scripts/FloorPlanePositioner.cs" id="6_tefeu"]
 [ext_resource type="Script" uid="uid://bldsnhhpdehp8" path="res://scripts/UI/ConnectionUI.cs" id="7_tipki"]
 [ext_resource type="Script" uid="uid://cf4r4jmd0pii8" path="res://scripts/UI/DraggablePanel.cs" id="8_85g3d"]
-[ext_resource type="Script" uid="uid://don8gi2b7ef1e" path="res://scenes/FreundOnlinePopup.cs" id="9_85g3d"]
+[ext_resource type="Script" uid="uid://don8gi2b7ef1e" path="res://scripts/FreundOnlinePopup.cs" id="9_85g3d"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sgp6g"]
 
@@ -46,10 +46,6 @@ transform = Transform3D(1, 0, 0, 0, 0.6699214, 0.742432, 0, -0.742432, 0.6699214
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89621526, -0.68717384)
 script = ExtResource("3_jyhfs")
 FlugzeugScene = ExtResource("5_tbgi4")
-
-[node name="Papierflugzeug" parent="." unique_id=2075262908 instance=ExtResource("5_tbgi4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5116882, -1.3473942, 0)
-Schub = 0.0
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=1434034684]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5646912, 0)
@@ -242,6 +238,7 @@ anchor_bottom = 1.0
 offset_left = -300.0
 grow_horizontal = 0
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("9_85g3d")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="FriendOnlineUI/Control" unique_id=702726188]

@@ -39,14 +39,14 @@ public partial class WindowManager : Node
 
     private void Init()
     {
-        DisplayServer.WindowSetTitle("HantelGame");
+        DisplayServer.WindowSetTitle("PaperPlaneMessenger");
         DisplayServer.WindowSetFlag(DisplayServer.WindowFlags.Transparent, true);
         DisplayServer.WindowSetFlag(DisplayServer.WindowFlags.AlwaysOnTop, true);
         DisplayServer.WindowSetFlag(DisplayServer.WindowFlags.Borderless, true);
         DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
 
 #if GODOT_WINDOWS
-        _hwnd = FindWindow(null, "HantelGame");
+        _hwnd = FindWindow(null, "PaperPlaneMessenger");
         GD.Print("HWND: " + _hwnd);
 #endif
 

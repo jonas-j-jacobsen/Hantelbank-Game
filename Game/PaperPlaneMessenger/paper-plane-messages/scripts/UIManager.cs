@@ -8,19 +8,24 @@ public partial class UIManager : CanvasLayer
 
     private bool _istOffen = false;
 
+    private DrawingCanvas _drawingCanvas;
+    private Label _senderLabel;
+
     public override void _Ready()
     {
         // Alle DraggablePanel Kinder einsammeln
         foreach (var node in GetChildren())
         {
-            if (node is Control panel)
+            if (node is DraggablePanel panel && panel is not EmpfängerAuswahl && panel is not FreundeUI )
             {
                 _panels.Add(panel);
                 panel.Visible = false;
                 panel.Scale = Vector2.Zero;
-                panel.PivotOffset = panel.Size / 2f;
             }
         }
+
+        _drawingCanvas = GetNode<DrawingCanvas>("ControlEasel/DrawingCanvas");
+        _senderLabel = GetNode<Label>("ControlEasel/DrawingCanvas/HBoxContainerSender/SenderLabel");
     }
 
     // Ursprung setzen bevor geöffnet wird (Position des angeklickten Objekts)
@@ -37,6 +42,23 @@ public partial class UIManager : CanvasLayer
     {
         if (_istOffen) return;
         _istOffen = true;
+
+        var authManager = GetNode<AuthManager>("/root/AuthManager");
+        _senderLabel.Text = authManager.Username;
+
+        foreach (var panel in _panels)
+            ÖffnePanel(panel);
+    }
+
+    public void AllesÖffnen(Image img, string senderName)
+    {
+        if (_istOffen) return;
+        _istOffen = true;
+
+        _drawingCanvas.SetzeImage(img);
+        var authManager = GetNode<AuthManager>("/root/AuthManager");
+        _senderLabel.Text = senderName ?? authManager.Username;
+
         foreach (var panel in _panels)
             ÖffnePanel(panel);
     }

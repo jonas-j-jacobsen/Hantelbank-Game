@@ -18,6 +18,14 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=1353449058]
+layout_mode = 2
+
+[node name="FreundeFinden" type="Button" parent="HBoxContainer/VBoxContainer" unique_id=456515797]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+text = "👤+"
+
 [node name="Speichern" type="Button" parent="HBoxContainer" unique_id=695256495]
 layout_mode = 2
 size_flags_vertical = 0
