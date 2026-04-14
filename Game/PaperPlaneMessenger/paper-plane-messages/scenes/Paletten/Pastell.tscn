@@ -11,8 +11,16 @@ texture = ExtResource("2_t3441")
 [node name="Label" parent="." index="1" unique_id=1089715081]
 text = "Pastell"
 
-[node name="Button" parent="GridContainer" parent_id_path=PackedInt32Array(1202740198) index="0" unique_id=161007354]
-modulate = Color(0, 1, 1, 1)
+[node name="GridContainer" parent="." index="2" unique_id=1202740198]
+offset_top = 125.0
+offset_bottom = 393.0
 
-[node name="Button19" parent="GridContainer" parent_id_path=PackedInt32Array(1202740198) index="1" unique_id=1952745989]
+[node name="Button" parent="GridContainer" index="0" unique_id=161007354]
+modulate = Color(0, 1, 1, 1)
+show_behind_parent = true
+
+[node name="Button19" parent="GridContainer" index="1" unique_id=1952745989]
 modulate = Color(1, 0, 1, 1)
+
+[node name="Button21" parent="GridContainer" index="3" unique_id=698453694]
+modulate = Color(0, 0, 0, 1)

@@ -12,6 +12,7 @@ public partial class Papierflugzeug : RigidBody3D
     public Image _image = Image.Create(512,512,false, Image.Format.Rgba8);
     public string EmpfängerId { get; set; } = null  ;
     public string SenderId { get; set; } = null;
+    public bool IstGruppe { get; private set; } = false;
 
 
 
@@ -95,7 +96,10 @@ public partial class Papierflugzeug : RigidBody3D
                     {
                         UIManager _uiManager = GetNode<UIManager>("/root/Main/PaperUI/CanvasLayer");
                         _uiManager.SetzeUrsprung(GlobalPosition);
-                        _uiManager.AllesÖffnen();
+                        _uiManager.AllesÖffnen( _image, SenderId);
+
+                        // Flieger despawnen
+                        QueueFree();
                     }
                 }
             }
@@ -261,7 +265,12 @@ public partial class Papierflugzeug : RigidBody3D
     private void RechtenRandVerlassen()
     {
 
-        _webSocketManager.SendeBild( EmpfängerId, _image, Position, LinearVelocity, Rotation);
+        if (EmpfängerId == null) return;
+        var wsManager = GetNode<WebSocketManager>("/root/WebSocketManager");
+        if (IstGruppe)
+            wsManager.SendeBildAnGruppe(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
+        else
+            wsManager.SendeBild(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
         QueueFree();
     }
 
@@ -273,9 +282,11 @@ public partial class Papierflugzeug : RigidBody3D
     }
 
 
-    public void SetEmpfänger(string id)
+
+    public void SetEmpfänger(string id, bool istGruppe)
     {
         EmpfängerId = id;
+        IstGruppe = istGruppe;
         AktualisiereRandKollision();
     }
 

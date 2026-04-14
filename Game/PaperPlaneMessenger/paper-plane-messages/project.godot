@@ -21,6 +21,7 @@ WindowManager="*uid://xeuehp5b2kqw"
 MousePassthroughManager="*uid://fuop4t3clvxe"
 WebSocketManager="*uid://dcqinwhfwy2yy"
 AuthManager="*uid://kpbeq7ptnbdu"
+FriendManager="*uid://cm0o0okbdq64c"
 
 [display]
 
@@ -43,4 +44,5 @@ project/assembly_name="PaperPlaneMessages"
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+anti_aliasing/quality/msaa_3d=1
 environment/defaults/default_clear_color=Color(0.3019608, 0.3019608, 0.3019608, 0)
