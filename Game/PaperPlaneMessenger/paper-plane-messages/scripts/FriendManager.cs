@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 public partial class FriendManager : Node
 {
-    private const string SERVER_URL = "https://paper-plane-messenger-server.onrender.com";
-    private static readonly System.Net.Http.HttpClient _client = new System.Net.Http.HttpClient();
+    private const string SERVER_URL = "https://api.studio-maus.de";
+    private static readonly System.Net.Http.HttpClient _client = HttpClientFactory.CreateIPv4Client();
     private AuthManager _authManager;
 
     public class Friend
@@ -29,7 +29,7 @@ public partial class FriendManager : Node
         public string GroupId { get; set; }
         public string Name { get; set; }
         public bool InviteOnly { get; set; }
-        public bool Aktiv { get; set; } = true; // NEU
+        public bool Aktiv { get; set; } = true;
     }
 
     [Signal] public delegate void AktualisiertEventHandler();
@@ -159,7 +159,6 @@ public partial class FriendManager : Node
     {
         try
         {
-            // Suchen
             var response = await _client.GetAsync(
                 $"{SERVER_URL}/users/search?q={username}&token={_authManager.Token}");
             var json = await response.Content.ReadAsStringAsync();
@@ -172,11 +171,9 @@ public partial class FriendManager : Node
                 return;
             }
 
-            // Ersten Treffer nehmen
             var targetId = results[0].GetProperty("user_id").GetString();
             var targetName = results[0].GetProperty("username").GetString();
 
-            // Anfrage senden
             var body = new StringContent(
                 JsonSerializer.Serialize(new { token = _authManager.Token, target_user_id = targetId }),
                 Encoding.UTF8, "application/json");

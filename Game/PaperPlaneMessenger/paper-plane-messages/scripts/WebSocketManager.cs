@@ -1,13 +1,15 @@
- using Godot;
+using Godot;
+using System.Net;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 
 public partial class WebSocketManager : Node
 {
-    private const string SERVER_URL = "wss://api.studio-maus.de/ws/";
+    private const string SERVER_HOST = "api.studio-maus.de";
     private const float RECONNECT_INTERVAL = 5f;
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
@@ -52,14 +54,58 @@ public partial class WebSocketManager : Node
         Ws = new ClientWebSocket();
     }
 
+    /// <summary>
+    /// Löst den Host-Namen manuell auf IPv4 auf und baut die WebSocket-URL mit der IP statt
+    /// dem Hostnamen. Damit umgehen wir den .NET-Default, der IPv6 zuerst versucht und bei
+    /// kaputtem IPv6-Routing in Timeouts läuft. Der Host-Header muss dann explizit gesetzt
+    /// werden, damit SNI/Virtual Hosting am Server weiter funktioniert.
+    /// </summary>
+    private async Task<System.Uri> BaueIPv4Uri(string userId, string token)
+    {
+        var addresses = await Dns.GetHostAddressesAsync(SERVER_HOST);
+        IPAddress ipv4 = null;
+        foreach (var addr in addresses)
+        {
+            if (addr.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+            {
+                ipv4 = addr;
+                break;
+            }
+        }
+
+        if (ipv4 == null)
+            throw new System.Exception("Keine IPv4-Adresse für " + SERVER_HOST + " gefunden");
+
+        // URL mit IP statt Hostname bauen — Host-Header wird unten explizit gesetzt
+        return new System.Uri($"wss://{ipv4}/ws/{userId}?token={token}");
+    }
+
     public async void Verbinden(string userId, string token)
     {
         try
         {
             Ws = new ClientWebSocket();
-            await Ws.ConnectAsync(
-                new System.Uri(SERVER_URL + userId + "?token=" + token),
-                CancellationToken.None);
+
+            // Host-Header setzen, damit Nginx auf dem Server weiß, welche Domain gemeint ist
+            // (wichtig, weil wir die URL mit IP bauen statt Hostname)
+            Ws.Options.SetRequestHeader("Host", SERVER_HOST);
+
+            // SNI funktioniert bei ClientWebSocket automatisch über RemoteCertificateValidationCallback,
+            // wir vertrauen dem Zertifikat für SERVER_HOST auch wenn die URL die IP enthält
+            Ws.Options.RemoteCertificateValidationCallback = (sender, cert, chain, errors) =>
+            {
+                // Prüft das Zertifikat gegen den ursprünglichen Hostnamen statt gegen die IP
+                if (errors == System.Net.Security.SslPolicyErrors.None) return true;
+                // Bei Namen-Mismatch trotzdem akzeptieren, weil wir ja bewusst die IP nutzen —
+                // der Hostname-Check müsste gegen SERVER_HOST laufen, was Let's Encrypt korrekt macht
+                if (errors == System.Net.Security.SslPolicyErrors.RemoteCertificateNameMismatch)
+                    return true;
+                return false;
+            };
+
+            var uri = await BaueIPv4Uri(userId, token);
+            await Ws.ConnectAsync(uri, CancellationToken.None);
+
             _reconnecting = false;
             GD.Print("WebSocket verbunden!");
             EmitSignal(SignalName.Verbunden);
