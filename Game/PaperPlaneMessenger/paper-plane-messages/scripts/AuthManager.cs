@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 public partial class AuthManager : Node
 {
-    private const string SERVER_URL = "https://paper-plane-messenger-server.onrender.com";
+    private const string SERVER_URL = "https://api.studio-maus.de";
     private const float POLL_INTERVAL = 2f;
 
     public string Token { get; private set; }

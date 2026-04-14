@@ -1,4 +1,4 @@
-using Godot;
+ using Godot;
 using System.Net.WebSockets;
 using System.Text;
 using System.Text.Json;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 public partial class WebSocketManager : Node
 {
-    private const string SERVER_URL = "wss://paper-plane-messenger-server.onrender.com/ws/";
+    private const string SERVER_URL = "wss://api.studio-maus.de/ws/";
     private const float RECONNECT_INTERVAL = 5f;
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
