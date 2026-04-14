@@ -1,32 +1,32 @@
 using Godot;
 using System;
-using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
 public partial class AuthManager : Node
 {
-    private const string SERVER_URL = "https://paper-plane-messenger-server.onrender.com";
-    private const float POLL_INTERVAL = 2f;
+    private const string SERVER_URL = "https://api.studio-maus.de";
+    private const float POLL_INTERVAL = 0.75f;
 
     public string Token { get; private set; }
     public string UserId { get; private set; }
     public string Username { get; private set; }
     public bool IstEingeloggt => Token != null;
 
+    public bool ValidierungLäuft { get; private set; } = false;
+
     private string _loginId;
     private float _pollTimer = 0f;
     private bool _pollt = false;
-    private static readonly System.Net.Http.HttpClient _client = new System.Net.Http.HttpClient();
+    private static readonly System.Net.Http.HttpClient _client = HttpClientFactory.CreateIPv4Client();
 
     [Signal] public delegate void EingeloggtEventHandler();
     [Signal] public delegate void UsernameWählenEventHandler();
     [Signal] public delegate void AusgeloggtEventHandler();
     [Signal] public delegate void FehlerEventHandler(string nachricht);
     [Signal] public delegate void UsernameGeändertEventHandler(string neuerUsername);
-    [Signal] public delegate void ServerWirdGestartetEventHandler();
-    [Signal] public delegate void ServerBereitEventHandler();
+    [Signal] public delegate void ValidierungFertigEventHandler(bool erfolgreich);
 
     public override void _Ready()
     {
@@ -38,6 +38,8 @@ public partial class AuthManager : Node
             UserId = data["user_id"].AsString();
             Username = data["username"].AsString();
             GD.Print("Gespeicherter Login geladen: " + Username);
+
+            ValidierungLäuft = true;
             ValidiereToken();
         }
     }
@@ -55,9 +57,12 @@ public partial class AuthManager : Node
 
     private async void ValidiereToken()
     {
+        GD.Print("ValidiereToken START");
+        bool erfolgreich = false;
         try
         {
             var response = await _client.GetAsync($"{SERVER_URL}/auth/me?token={Token}");
+            GD.Print($"ValidiereToken Response: {(int)response.StatusCode}");
             await ToSignal(GetTree(), SceneTree.SignalName.ProcessFrame);
 
             if (response.IsSuccessStatusCode)
@@ -66,6 +71,7 @@ public partial class AuthManager : Node
                 var doc = JsonDocument.Parse(json);
                 Username = doc.RootElement.GetProperty("username").GetString();
                 SpeichereLogin();
+                erfolgreich = true;
                 EmitSignal(SignalName.Eingeloggt);
             }
             else if (response.StatusCode == System.Net.HttpStatusCode.Unauthorized)
@@ -74,43 +80,33 @@ public partial class AuthManager : Node
                 LöscheLogin();
                 EmitSignal(SignalName.Ausgeloggt);
             }
+            else
+            {
+                GD.Print($"Unerwarteter Status: {(int)response.StatusCode}");
+                EmitSignal(SignalName.Ausgeloggt);
+            }
         }
         catch (Exception e)
         {
             GD.Print("Token Validierung Fehler: " + e.Message);
-            // Bei Verbindungsfehler trotzdem einloggen
-            EmitSignal(SignalName.Eingeloggt);
+            EmitSignal(SignalName.Ausgeloggt);
+        }
+        finally
+        {
+            ValidierungLäuft = false;
+            EmitSignal(SignalName.ValidierungFertig, erfolgreich);
         }
     }
 
-    public async void StarteLogin()
+    public void StarteLogin()
     {
         _loginId = Guid.NewGuid().ToString();
-
-        // Server aufwecken bevor Browser öffnet
-        EmitSignal(SignalName.ServerWirdGestartet);
-        await WeckeServer();
-        EmitSignal(SignalName.ServerBereit);
 
         var url = $"{SERVER_URL}/auth/login?login_id={_loginId}";
         OS.ShellOpen(url);
         _pollt = true;
         _pollTimer = 0f;
         GD.Print("Browser geöffnet, warte auf Login...");
-    }
-
-    private async Task WeckeServer()
-    {
-        try
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                var response = await _client.GetAsync($"{SERVER_URL}/ping");
-                if (response.IsSuccessStatusCode) return;
-                await Task.Delay(3000);
-            }
-        }
-        catch { }
     }
 
     private async void Poll()
@@ -149,7 +145,7 @@ public partial class AuthManager : Node
     {
         try
         {
-            var body = new StringContent(
+            var body = new System.Net.Http.StringContent(
                 JsonSerializer.Serialize(new { token = _loginId, username }),
                 Encoding.UTF8, "application/json");
 
@@ -186,7 +182,7 @@ public partial class AuthManager : Node
     {
         try
         {
-            var body = new StringContent(
+            var body = new System.Net.Http.StringContent(
                 JsonSerializer.Serialize(new { token = Token, username = neuerUsername }),
                 Encoding.UTF8, "application/json");
 
