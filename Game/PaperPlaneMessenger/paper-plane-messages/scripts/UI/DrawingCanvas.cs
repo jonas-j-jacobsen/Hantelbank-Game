@@ -73,10 +73,7 @@ public partial class DrawingCanvas : Control
             }
             _letztePos = pos;
 
-            GD.Print("mm.Position: " + mm.Position);
-            GD.Print("GlobalRect: " + GetGlobalRect());
-            GD.Print("GlobalPosition: " + GlobalPosition);
-            GD.Print("Size: " + Size);
+          
         }
 
 

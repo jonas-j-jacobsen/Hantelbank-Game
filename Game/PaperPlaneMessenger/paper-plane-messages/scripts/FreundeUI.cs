@@ -168,9 +168,8 @@ public partial class FreundeUI : DraggablePanel
 
     public void ToggleSichtbarkeit()
     {
-        GD.Print("Toggle aufgerufen, Visible vorher: " + Visible);
+        
         Visible = !Visible;
-        GD.Print("Visible nachher: " + Visible);
         if (Visible) _friendManager.LadeAlles();
     }
 }

@@ -9,6 +9,11 @@ public partial class Papierflugzeug : RigidBody3D
     [Export] public float WurfStärke = 10f;
 
 
+    private float _sendeTimer = 0f;
+    private bool _sendet = false;
+    private const float SENDE_TIMEOUT = 60f;
+
+
     public Image _image = Image.Create(512,512,false, Image.Format.Rgba8);
     public string EmpfängerId { get; set; } = null  ;
     public string SenderId { get; set; } = null;
@@ -132,6 +137,19 @@ public partial class Papierflugzeug : RigidBody3D
 
     public override void _Process(double delta)
     {
+
+        if (_sendet)
+        {
+            _sendeTimer += (float)delta;
+            if (_sendeTimer >= SENDE_TIMEOUT)
+            {
+                _sendet = false;
+                _sendeTimer = 0f;
+                FliegerZurückschicken();
+            }
+        }
+
+
         if (_meshGimbal == null) return;
 
         #region In screen check
@@ -262,16 +280,43 @@ public partial class Papierflugzeug : RigidBody3D
     }
 
 
-    private void RechtenRandVerlassen()
+    private async void RechtenRandVerlassen()
     {
 
         if (EmpfängerId == null) return;
+        _sendet = true;
+
         var wsManager = GetNode<WebSocketManager>("/root/WebSocketManager");
-        if (IstGruppe)
-            wsManager.SendeBildAnGruppe(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
-        else
-            wsManager.SendeBild(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
-        QueueFree();
+
+        try
+        {
+            if (IstGruppe)
+                await wsManager.SendeBildAnGruppeAsync(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
+            else
+                await wsManager.SendeBildAsync(EmpfängerId, _image, GlobalPosition, LinearVelocity, Rotation);
+
+            // Erfolgreich gesendet → despawnen
+            QueueFree();
+        }
+        catch
+        {
+            // Fehlgeschlagen → zurückschicken
+            FliegerZurückschicken();
+        }
+    }
+
+    private void FliegerZurückschicken()
+    {
+        _sendet = false;
+        EmpfängerId = null;
+        IstGruppe = false;
+        AktualisiereRandKollision();
+
+        // Umdrehen und zurückfliegen
+        LinearVelocity = new Vector3(-Mathf.Abs(LinearVelocity.X), LinearVelocity.Y, 0);
+        Rotation = new Vector3(Rotation.X, Rotation.Y, Mathf.Pi - Rotation.Z);
+
+        GD.Print("Flieger zurückgeschickt!");
     }
 
 

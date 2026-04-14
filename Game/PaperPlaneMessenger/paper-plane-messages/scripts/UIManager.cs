@@ -33,7 +33,6 @@ public partial class UIManager : CanvasLayer
     {
         var kamera = GetViewport().GetCamera3D();
         _ursprung = kamera.UnprojectPosition(weltPos);
-        GD.Print("Ursprung gesetzt: " + _ursprung);
     }
 
 

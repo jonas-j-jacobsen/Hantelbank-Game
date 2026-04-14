@@ -112,7 +112,7 @@ public partial class FriendManager : Node
                     UserId = item.GetProperty("user_id").GetString(),
                     Username = item.GetProperty("username").GetString(),
                     Online = true
-                });
+                });     
             return online;
         }
         catch { return new List<Friend>(); }

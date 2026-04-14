@@ -3,28 +3,88 @@
   "WorkspaceRootPath": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scenes\\freundonlinepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scenes\\freundonlinepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\depricated\\flugzeugspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\depricated\\flugzeugspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\aktionsbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\aktionsbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\drawingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\drawingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\papierflugzeug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\papierflugzeug.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\freundonlinepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\freundonlinepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\depricated\\sendertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\depricated\\sendertester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\freundeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\freundeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\empf\u00E4ngerauswahl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\empf\u00E4ngerauswahl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\windowmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\toolbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\toolbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\friendmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\friendmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\papierblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\papierblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\mousepassthroughmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\mousepassthroughmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\UI\\ConnectionUI.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\connectionui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\connectionui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\draggablepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\draggablepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\FriendManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scenes\\FriendManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\empf\u00E4ngerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\empf\u00E4ngerliste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\websocketmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\AuthManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|f:\\minigames\\hantelbank\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\empf\u00E4ngerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\empf\u00E4ngerbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,50 +94,264 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FreundOnlinePopup.cs",
-              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\FreundOnlinePopup.cs",
-              "RelativeDocumentMoniker": "scenes\\FreundOnlinePopup.cs",
-              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\FreundOnlinePopup.cs",
-              "RelativeToolTip": "scenes\\FreundOnlinePopup.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T22:22:47.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MousePassthroughManager.cs",
-              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
-              "RelativeDocumentMoniker": "scripts\\MousePassthroughManager.cs",
-              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
-              "RelativeToolTip": "scripts\\MousePassthroughManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T21:14:16.708Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ConnectionUI.cs",
-              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs",
-              "RelativeDocumentMoniker": "scripts\\UI\\ConnectionUI.cs",
-              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs",
-              "RelativeToolTip": "scripts\\UI\\ConnectionUI.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAAACwAAAAJAAAA",
+              "Title": "AktionsBar.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\AktionsBar.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\AktionsBar.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\AktionsBar.cs",
+              "RelativeToolTip": "scripts\\UI\\AktionsBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGYAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:51:02.642Z",
+              "WhenOpened": "2026-03-30T19:32:35.887Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UIManager.cs",
+              "RelativeDocumentMoniker": "scripts\\UIManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UIManager.cs",
+              "RelativeToolTip": "scripts\\UIManager.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAIAywDMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T22:07:57.163Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SenderTester.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\depricated\\SenderTester.cs",
+              "RelativeDocumentMoniker": "scripts\\depricated\\SenderTester.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\depricated\\SenderTester.cs",
+              "RelativeToolTip": "scripts\\depricated\\SenderTester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T22:01:38.167Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Papierflugzeug.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\Papierflugzeug.cs",
+              "RelativeDocumentMoniker": "scripts\\Papierflugzeug.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\Papierflugzeug.cs",
+              "RelativeToolTip": "scripts\\Papierflugzeug.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:51:58.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebSocketManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
+              "RelativeDocumentMoniker": "scripts\\WebSocketManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
+              "RelativeToolTip": "scripts\\WebSocketManager.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowCwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:17:22.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FreundOnlinePopup.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FreundOnlinePopup.cs",
+              "RelativeDocumentMoniker": "scripts\\FreundOnlinePopup.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FreundOnlinePopup.cs",
+              "RelativeToolTip": "scripts\\FreundOnlinePopup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T21:33:50.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FlugzeugSpawner.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\depricated\\FlugzeugSpawner.cs",
+              "RelativeDocumentMoniker": "scripts\\depricated\\FlugzeugSpawner.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\depricated\\FlugzeugSpawner.cs",
+              "RelativeToolTip": "scripts\\depricated\\FlugzeugSpawner.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:17:09.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DrawingCanvas.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\DrawingCanvas.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\DrawingCanvas.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\DrawingCanvas.cs",
+              "RelativeToolTip": "scripts\\UI\\DrawingCanvas.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAtwB4AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T11:21:03.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Empf\u00E4ngerAuswahl.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerAuswahl.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\Empf\u00E4ngerAuswahl.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerAuswahl.cs",
+              "RelativeToolTip": "scripts\\UI\\Empf\u00E4ngerAuswahl.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAYwEUAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T19:30:30.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WindowManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WindowManager.cs",
+              "RelativeDocumentMoniker": "scripts\\WindowManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WindowManager.cs",
+              "RelativeToolTip": "scripts\\WindowManager.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAmwDEAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:54:18.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Toolbar.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Toolbar.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\Toolbar.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Toolbar.cs",
+              "RelativeToolTip": "scripts\\UI\\Toolbar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-01T19:48:23.538Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FreundeUI.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FreundeUI.cs",
+              "RelativeDocumentMoniker": "scripts\\FreundeUI.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FreundeUI.cs",
+              "RelativeToolTip": "scripts\\FreundeUI.cs",
+              "ViewState": "AQIAAI4AAAAAAAAAAAAwwCoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:27:46.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FriendManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FriendManager.cs",
+              "RelativeDocumentMoniker": "scripts\\FriendManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FriendManager.cs",
+              "RelativeToolTip": "scripts\\FriendManager.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAUwGkAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:26:22.741Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Papierblock.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\Papierblock.cs",
+              "RelativeDocumentMoniker": "scripts\\Papierblock.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\Papierblock.cs",
+              "RelativeToolTip": "scripts\\Papierblock.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAAAFcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:33:19.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MousePassthroughManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
+              "RelativeDocumentMoniker": "scripts\\MousePassthroughManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
+              "RelativeToolTip": "scripts\\MousePassthroughManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T20:43:42.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ConnectionUI.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\ConnectionUI.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs",
+              "RelativeToolTip": "scripts\\UI\\ConnectionUI.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAswEoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:51:02.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Empf\u00E4ngerButton.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerButton.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\Empf\u00E4ngerButton.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerButton.cs",
+              "RelativeToolTip": "scripts\\UI\\Empf\u00E4ngerButton.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T18:49:45.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DraggablePanel.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\DraggablePanel.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\DraggablePanel.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\DraggablePanel.cs",
+              "RelativeToolTip": "scripts\\UI\\DraggablePanel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-31T11:20:47.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "AuthManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs",
+              "RelativeDocumentMoniker": "scripts\\AuthManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs",
+              "RelativeToolTip": "scripts\\AuthManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-21T20:13:03.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FriendManager.cs",
+              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\FriendManager.cs",
+              "RelativeDocumentMoniker": "scenes\\FriendManager.cs",
+              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scenes\\FriendManager.cs",
+              "RelativeToolTip": "scenes\\FriendManager.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAAwEIBAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-30T12:24:29.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "Empf\u00E4ngerListe.cs",
               "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerListe.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\Empf\u00E4ngerListe.cs",
@@ -85,34 +359,7 @@
               "RelativeToolTip": "scripts\\UI\\Empf\u00E4ngerListe.cs",
               "ViewState": "AQIAAAgAAAAAAAAAAAAAwCQAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:30:17.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WebSocketManager.cs",
-              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
-              "RelativeDocumentMoniker": "scripts\\WebSocketManager.cs",
-              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
-              "RelativeToolTip": "scripts\\WebSocketManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:17:22.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthManager.cs",
-              "DocumentMoniker": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs",
-              "RelativeDocumentMoniker": "scripts\\AuthManager.cs",
-              "ToolTip": "F:\\Minigames\\Hantelbank\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs",
-              "RelativeToolTip": "scripts\\AuthManager.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAADwvw0AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:13:03.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:30:17.601Z"
             }
           ]
         }

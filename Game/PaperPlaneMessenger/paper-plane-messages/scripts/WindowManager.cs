@@ -46,8 +46,8 @@ public partial class WindowManager : Node
         DisplayServer.WindowSetMode(DisplayServer.WindowMode.Maximized);
 
 #if GODOT_WINDOWS
-        _hwnd = FindWindow(null, "PaperPlaneMessenger");
-        GD.Print("HWND: " + _hwnd);
+        _hwnd = (IntPtr)DisplayServer.WindowGetNativeHandle(
+        DisplayServer.HandleType.WindowHandle);
 #endif
 
         SetClickThrough(true);

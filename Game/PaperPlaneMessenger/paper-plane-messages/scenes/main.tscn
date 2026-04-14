@@ -227,6 +227,7 @@ text = "Connecting..."
 horizontal_alignment = 1
 
 [node name="FriendOnlineUI" type="CanvasLayer" parent="." unique_id=1753092825]
+layer = 10
 
 [node name="Control" type="Control" parent="FriendOnlineUI" unique_id=1196560652]
 custom_minimum_size = Vector2(300, 0)

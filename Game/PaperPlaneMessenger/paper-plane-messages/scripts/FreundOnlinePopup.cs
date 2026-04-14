@@ -9,7 +9,11 @@ public partial class FreundOnlinePopup : Control
         _container = GetNode<VBoxContainer>("VBoxContainer");
 
         var wsManager = GetNode<WebSocketManager>("/root/WebSocketManager");
-        wsManager.FreundOnline += (userId, username) => ZeigePopup(username);
+        wsManager.FreundOnline += (userId, username) => 
+        {
+            GD.Print("FreundOnline Signal empfangen: " + username);
+            ZeigePopup(username); 
+        };
     }
 
     private void ZeigePopup(string username)

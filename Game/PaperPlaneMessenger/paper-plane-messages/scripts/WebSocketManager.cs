@@ -4,11 +4,16 @@ using System.Text;
 using System.Text.Json;
 using System.Threading;
 using System.Collections.Generic;
+using System.Threading.Tasks;
+using System;
 
 public partial class WebSocketManager : Node
 {
     private const string SERVER_URL = "wss://paper-plane-messenger-server.onrender.com/ws/";
     private const float RECONNECT_INTERVAL = 5f;
+    private float _pingTimer = 0f;
+    private const float PING_INTERVAL = 20f;
+
 
     public ClientWebSocket Ws { get; private set; } = new ClientWebSocket();
     public List<OnlinePlayer> OnlineSpieler { get; private set; } = new();
@@ -37,7 +42,45 @@ public partial class WebSocketManager : Node
         _authManager = GetNode<AuthManager>("/root/AuthManager");
         _authManager.Eingeloggt += OnEingeloggt;
         _authManager.Ausgeloggt += OnAusgeloggt;
+        Test();
     }
+
+    private void Test()
+    {
+        var testBild = Image.CreateEmpty(512, 512, false, Image.Format.Rgba8);
+
+        // Zufällige Pixel für realistische Größe
+        var rng = new RandomNumberGenerator();
+        for (int x = 0; x < 512; x++)
+            for (int y = 0; y < 512; y++)
+                testBild.SetPixel(x, y, new Color(rng.Randf(), rng.Randf(), rng.Randf(), 1));
+
+        var bytes = testBild.SavePngToBuffer();
+        GD.Print("Zufälliges Bild: " + bytes.Length / 1024 + " KB");
+    }
+
+
+    public override void _Process(double delta)
+    {
+        if (Ws.State != WebSocketState.Open) return;
+        _pingTimer += (float)delta;
+        if (_pingTimer >= PING_INTERVAL)
+        {
+            _pingTimer = 0f;
+            SendePing();
+        }
+    }
+
+    private async void SendePing()
+    {
+        try
+        {
+            await SendeNachricht(JsonSerializer.Serialize(new { type = "ping" }));
+        }
+        catch { }
+    }
+
+
 
     private void OnEingeloggt()
     {
@@ -145,6 +188,10 @@ public partial class WebSocketManager : Node
                     EmitSignal(SignalName.FreundOffline,
                         root.GetProperty("user_id").GetString());
                 }
+                else if (type == "pong")
+                {
+                    // nichts tun
+                }
             }
             catch (System.Exception e)
             {
@@ -157,9 +204,11 @@ public partial class WebSocketManager : Node
         StarteReconnect();
     }
 
-    public async void SendeBild(string targetId, Image image, Vector3 position, Vector3 velocity, Vector3 rotation)
+    public async Task SendeBildAsync(string targetId, Image image, Vector3 position, Vector3 velocity, Vector3 rotation)
     {
-        if (Ws.State != WebSocketState.Open) return;
+        if (Ws.State != WebSocketState.Open)
+            throw new Exception("WebSocket nicht verbunden");
+
         var bytes = image.SavePngToBuffer();
         var base64 = System.Convert.ToBase64String(bytes);
         var message = JsonSerializer.Serialize(new
@@ -175,9 +224,11 @@ public partial class WebSocketManager : Node
         await SendeNachricht(message);
     }
 
-    public async void SendeBildAnGruppe(string groupId, Image image, Vector3 position, Vector3 velocity, Vector3 rotation)
+    public async Task SendeBildAnGruppeAsync(string groupId, Image image, Vector3 position, Vector3 velocity, Vector3 rotation)
     {
-        if (Ws.State != WebSocketState.Open) return;
+        if (Ws.State != WebSocketState.Open)
+            throw new Exception("WebSocket nicht verbunden");
+
         var bytes = image.SavePngToBuffer();
         var base64 = System.Convert.ToBase64String(bytes);
         var message = JsonSerializer.Serialize(new

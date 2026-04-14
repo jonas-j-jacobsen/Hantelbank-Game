@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 public partial class AktionsBar : DraggablePanel
 {
@@ -91,7 +92,15 @@ public partial class AktionsBar : DraggablePanel
         if (_empfängerButton.EmpfängerId == null) return;
 
         var bild = _canvas.GetImage();
-        var flieger = GD.Load<PackedScene>("res://scenes/Papierflugzeug.tscn").Instantiate<Papierflugzeug>();
+        try
+        {
+            var scene = GD.Load<PackedScene>("res://scenes/papierflugzeug.tscn");
+            if (scene == null)
+            {
+                GD.PrintErr("Scene nicht gefunden!");
+                return;
+            }
+            var flieger = GD.Load<PackedScene>("res://scenes/papierflugzeug.tscn").Instantiate<Papierflugzeug>();
         GetTree().CurrentScene.AddChild(flieger);
 
         // Links vom Bildschirm spawnen
@@ -109,5 +118,10 @@ public partial class AktionsBar : DraggablePanel
         flieger.SetEmpfänger(_empfängerButton.EmpfängerId, _empfängerButton.IstGruppe);
 
         _uiManager.AllesSchließen();
+        }
+        catch (Exception e)
+        {
+            GD.PrintErr("Fehler beim Spawnen: " + e.Message);
+        }
     }
 }
