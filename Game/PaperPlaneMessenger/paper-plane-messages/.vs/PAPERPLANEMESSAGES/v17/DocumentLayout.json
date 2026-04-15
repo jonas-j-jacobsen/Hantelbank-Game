@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\drawingcanvas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|c:\\users\\deep sky\\documents\\minigames\\hantelgame\\hantelbank-game\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\toolbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\toolbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|c:\\users\\deep sky\\documents\\minigames\\hantelgame\\hantelbank-game\\game\\paperplanemessenger\\paper-plane-messages\\scripts\\ui\\palettencarousel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{752B8E39-2730-4A50-B2FD-0A1CB8D6FF45}|PaperPlaneMessages.csproj|solutionrelative:scripts\\ui\\palettencarousel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -46,8 +50,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Toolbar.cs",
+              "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Toolbar.cs",
+              "RelativeDocumentMoniker": "scripts\\UI\\Toolbar.cs",
+              "ToolTip": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Toolbar.cs",
+              "RelativeToolTip": "scripts\\UI\\Toolbar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T11:12:58.453Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -56,14 +73,14 @@
               "RelativeDocumentMoniker": "scripts\\UI\\DrawingCanvas.cs",
               "ToolTip": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\DrawingCanvas.cs",
               "RelativeToolTip": "scripts\\UI\\DrawingCanvas.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-15T11:03:09.834Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "PalettenCarousel.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\PalettenCarousel.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\PalettenCarousel.cs",
@@ -71,12 +88,11 @@
               "RelativeToolTip": "scripts\\UI\\PalettenCarousel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T10:04:26.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T10:04:26.493Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "HttpClientFactory.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\HttpClientFactory.cs",
               "RelativeDocumentMoniker": "scripts\\HttpClientFactory.cs",
@@ -88,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "FriendManager.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\FriendManager.cs",
               "RelativeDocumentMoniker": "scripts\\FriendManager.cs",
@@ -100,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\AuthManager.cs",
               "RelativeDocumentMoniker": "scripts\\AuthManager.cs",
@@ -108,12 +124,11 @@
               "RelativeToolTip": "scripts\\AuthManager.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-21T20:13:03.604Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-21T20:13:03.604Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MousePassthroughManager.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\MousePassthroughManager.cs",
               "RelativeDocumentMoniker": "scripts\\MousePassthroughManager.cs",
@@ -125,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Empf\u00E4ngerListe.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\Empf\u00E4ngerListe.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\Empf\u00E4ngerListe.cs",
@@ -137,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WebSocketManager.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\WebSocketManager.cs",
               "RelativeDocumentMoniker": "scripts\\WebSocketManager.cs",
@@ -149,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ConnectionUI.cs",
               "DocumentMoniker": "C:\\Users\\Deep Sky\\Documents\\Minigames\\HantelGame\\Hantelbank-Game\\Game\\PaperPlaneMessenger\\paper-plane-messages\\scripts\\UI\\ConnectionUI.cs",
               "RelativeDocumentMoniker": "scripts\\UI\\ConnectionUI.cs",

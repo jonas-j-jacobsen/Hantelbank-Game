@@ -5,9 +5,11 @@
 [ext_resource type="Script" uid="uid://cf4r4jmd0pii8" path="res://scripts/UI/DraggablePanel.cs" id="2_mfgjd"]
 [ext_resource type="Script" uid="uid://vpjq31jmifna" path="res://scripts/UI/EmpfängerAuswahl.cs" id="2_r82nm"]
 [ext_resource type="Script" uid="uid://bov803kg6xata" path="res://scripts/UI/EmpfängerButton.cs" id="4_1vifu"]
+[ext_resource type="Texture2D" uid="uid://tcccab83cde1" path="res://Assets/BrushTextures/KreideBrush.png" id="4_rggbs"]
 [ext_resource type="Script" uid="uid://d0waf0sb8vkdo" path="res://scripts/UI/PalettenCarousel.cs" id="4_sfr7a"]
 [ext_resource type="PackedScene" uid="uid://c30sh3n42isy4" path="res://scenes/Paletten/Pastell.tscn" id="5_co4gf"]
 [ext_resource type="PackedScene" uid="uid://dknvnboy5ibs5" path="res://scenes/UIActions.tscn" id="5_fxxod"]
+[ext_resource type="Texture2D" uid="uid://kdrcdrkeiper" path="res://Assets/BrushTextures/PinselBrush.png" id="5_wjo4f"]
 [ext_resource type="Script" uid="uid://bcpvmdjmtswfq" path="res://scripts/UI/AktionsBar.cs" id="6_fxxod"]
 [ext_resource type="PackedScene" uid="uid://c185gmq6tx5le" path="res://scenes/Paletten/GrauInGrau.tscn" id="7_56kpc"]
 [ext_resource type="Script" uid="uid://dkdl6rjv7lqog" path="res://scripts/UI/Toolbar.cs" id="7_h80pf"]
@@ -64,6 +66,8 @@ offset_bottom = 256.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("2_co4gf")
+KreideTextur = ExtResource("4_rggbs")
+PinselTextur = ExtResource("5_wjo4f")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/ControlEasel/DrawingCanvas" unique_id=2119184272]
 layout_mode = 1
@@ -204,7 +208,11 @@ layout_mode = 2
 layout_mode = 2
 text = "Rund"
 
-[node name="KreideButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=1547368576]
+[node name="PinselButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=1547368576]
+layout_mode = 2
+text = "Pinsel"
+
+[node name="KreideButton" type="Button" parent="CanvasLayer/ControlToolbox/BoxContainer/ToolBox/Toolbar" unique_id=1863681641]
 layout_mode = 2
 text = "Kreide"
 

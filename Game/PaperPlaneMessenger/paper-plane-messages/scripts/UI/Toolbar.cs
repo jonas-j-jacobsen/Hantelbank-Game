@@ -10,6 +10,8 @@ public partial class Toolbar : VBoxContainer
      
         GetNode<Button>("Toolbar/RundButton").Pressed += () =>
             _canvas.SetzePinselTyp(DrawingCanvas.PinselTyp.Rund);
+        GetNode<Button>("Toolbar/PinselButton").Pressed += () =>
+            _canvas.SetzePinselTyp(DrawingCanvas.PinselTyp.Pinsel);
         GetNode<Button>("Toolbar/KreideButton").Pressed += () =>
             _canvas.SetzePinselTyp(DrawingCanvas.PinselTyp.Kreide);
         GetNode<Button>("Toolbar/RadiergummiButton").Pressed += () =>
