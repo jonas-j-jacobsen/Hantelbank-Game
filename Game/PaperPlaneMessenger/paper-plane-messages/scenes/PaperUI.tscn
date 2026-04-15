@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c30sh3n42isy4" path="res://scenes/Paletten/Pastell.tscn" id="5_co4gf"]
 [ext_resource type="PackedScene" uid="uid://dknvnboy5ibs5" path="res://scenes/UIActions.tscn" id="5_fxxod"]
 [ext_resource type="Script" uid="uid://bcpvmdjmtswfq" path="res://scripts/UI/AktionsBar.cs" id="6_fxxod"]
-[ext_resource type="PackedScene" uid="uid://dkduyue2d3pym" path="res://scenes/Paletten/Base.tscn" id="6_j281i"]
+[ext_resource type="PackedScene" uid="uid://c185gmq6tx5le" path="res://scenes/Paletten/GrauInGrau.tscn" id="7_56kpc"]
 [ext_resource type="Script" uid="uid://dkdl6rjv7lqog" path="res://scripts/UI/Toolbar.cs" id="7_h80pf"]
 [ext_resource type="Script" uid="uid://c3jqp54gi1vto" path="res://scripts/FreundeUI.cs" id="12_56kpc"]
 
@@ -81,6 +81,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.93310183, 0.93388087, 0.9073249, 1)
 
 [node name="HBoxContainerSender" type="HBoxContainer" parent="CanvasLayer/ControlEasel/DrawingCanvas" unique_id=1222090244]
 layout_mode = 1
@@ -173,7 +174,7 @@ layout_mode = 1
 offset_left = -100.0
 offset_right = 100.0
 
-[node name="Base2" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer/PalettenHolder" unique_id=143665039 instance=ExtResource("6_j281i")]
+[node name="Base3" parent="CanvasLayer/ControlToolbox/BoxContainer/HBoxContainer/PalettenHolder" unique_id=734830981 instance=ExtResource("7_56kpc")]
 visible = false
 layout_mode = 1
 offset_left = -100.0

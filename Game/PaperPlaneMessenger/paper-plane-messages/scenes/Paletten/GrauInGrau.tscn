@@ -1,89 +1,84 @@
-[gd_scene format=3 uid="uid://c30sh3n42isy4"]
+[gd_scene format=3 uid="uid://c185gmq6tx5le"]
 
-[ext_resource type="PackedScene" uid="uid://dkduyue2d3pym" path="res://scenes/Paletten/Base.tscn" id="1_8516h"]
-[ext_resource type="Texture2D" uid="uid://dywm0c153llyq" path="res://Assets/Paletten/Pastel_Test.png" id="2_t3441"]
+[ext_resource type="PackedScene" uid="uid://dkduyue2d3pym" path="res://scenes/Paletten/Base.tscn" id="1_qbfjo"]
 
-[node name="Base" unique_id=1235049870 instance=ExtResource("1_8516h")]
+[node name="Base" unique_id=1235049870 instance=ExtResource("1_qbfjo")]
 
 [node name="TextureRect" parent="." index="0" unique_id=330941202]
-texture = ExtResource("2_t3441")
+texture = null
 
 [node name="Label" parent="." index="1" unique_id=1089715081]
-text = "Pastell"
+text = "Grau in Grau"
 
 [node name="GridContainer" parent="." index="2" unique_id=1202740198]
 offset_top = 125.0
 offset_bottom = 393.0
 
-[node name="Button" parent="GridContainer" index="0" unique_id=161007354]
-modulate = Color(0.8613, 0.89347506, 0.99, 1)
-show_behind_parent = true
-
 [node name="Button19" parent="GridContainer" index="1" unique_id=1952745989]
-modulate = Color(0.7227, 0.78952503, 0.99, 1)
+modulate = Color(0.95, 0.95, 0.95, 1)
 
 [node name="Button20" parent="GridContainer" index="2" unique_id=948341874]
-modulate = Color(0.5056, 0.57670003, 0.79, 1)
+modulate = Color(0.91, 0.91, 0.91, 1)
 
 [node name="Button21" parent="GridContainer" index="3" unique_id=698453694]
-modulate = Color(0.92872, 0.86480004, 0.94, 1)
+modulate = Color(0.87, 0.87, 0.87, 1)
 
 [node name="Button22" parent="GridContainer" index="4" unique_id=215750589]
-modulate = Color(0.89411765, 0.75686276, 0.91764706, 1)
+modulate = Color(0.83, 0.83, 0.83, 1)
 
 [node name="Button23" parent="GridContainer" index="5" unique_id=1766207789]
-modulate = Color(0.65858, 0.53720003, 0.68, 1)
+modulate = Color(0.79, 0.79, 0.79, 1)
 
 [node name="Button24" parent="GridContainer" index="6" unique_id=424884757]
-modulate = Color(1, 0.82, 0.844, 1)
+modulate = Color(0.75, 0.75, 0.75, 1)
 
 [node name="Button2" parent="GridContainer" index="7" unique_id=1337137966]
-modulate = Color(0.98, 0.7056, 0.7421866, 1)
+modulate = Color(0.71, 0.71, 0.71, 1)
 
 [node name="Button3" parent="GridContainer" index="8" unique_id=829415965]
-modulate = Color(0.8, 0.53599995, 0.5712, 1)
+modulate = Color(0.67, 0.67, 0.67, 1)
 
 [node name="Button4" parent="GridContainer" index="9" unique_id=1321595677]
-modulate = Color(1, 0.934, 0.82, 1)
+modulate = Color(0.63, 0.63, 0.63, 1)
 
 [node name="Button5" parent="GridContainer" index="10" unique_id=1649580574]
-modulate = Color(0.94, 0.86762, 0.7426, 1)
+modulate = Color(0.58, 0.58, 0.58, 1)
 
 [node name="Button6" parent="GridContainer" index="11" unique_id=1382947609]
-modulate = Color(0.86, 0.75909334, 0.5848, 1)
+modulate = Color(0.54, 0.54, 0.54, 1)
 
 [node name="Button7" parent="GridContainer" index="12" unique_id=862777186]
-modulate = Color(1, 0.984, 0.88, 1)
+modulate = Color(0.5, 0.5, 0.5, 1)
 
 [node name="Button8" parent="GridContainer" index="13" unique_id=389193958]
-modulate = Color(1, 0.97333336, 0.8, 1)
+modulate = Color(0.46, 0.46, 0.46, 1)
 
 [node name="Button9" parent="GridContainer" index="14" unique_id=1550948171]
-modulate = Color(1, 0.96133333, 0.71000004, 1)
+modulate = Color(0.42, 0.42, 0.42, 1)
 
 [node name="Button10" parent="GridContainer" index="15" unique_id=34020780]
-modulate = Color(0.9647059, 0.98039216, 0.83137256, 1)
+modulate = Color(0.33, 0.33, 0.33, 1)
 
 [node name="Button11" parent="GridContainer" index="16" unique_id=888128371]
-modulate = Color(0.89976, 0.92, 0.7176, 1)
+modulate = Color(0.29, 0.29, 0.29, 1)
 
 [node name="Button12" parent="GridContainer" index="17" unique_id=979834522]
-modulate = Color(0.7995, 0.82, 0.615, 1)
+modulate = Color(0.25, 0.25, 0.25, 1)
 
 [node name="Button13" parent="GridContainer" index="18" unique_id=685221317]
-modulate = Color(0.8922384, 0.97, 0.8439, 1)
+modulate = Color(0.21, 0.21, 0.21, 1)
 
 [node name="Button14" parent="GridContainer" index="19" unique_id=1588413824]
-modulate = Color(0.8235534, 0.92, 0.7636, 1)
+modulate = Color(0.16, 0.16, 0.16, 1)
 
 [node name="Button15" parent="GridContainer" index="20" unique_id=287238921]
-modulate = Color(0.61788005, 0.72, 0.5544, 1)
+modulate = Color(0.12, 0.12, 0.12, 1)
 
 [node name="Button16" parent="GridContainer" index="21" unique_id=382633491]
-modulate = Color(0.7372549, 0.8784314, 0.9098039, 1)
+modulate = Color(0.08, 0.08, 0.08, 1)
 
 [node name="Button17" parent="GridContainer" index="22" unique_id=1445924742]
-modulate = Color(0.5921569, 0.7764706, 0.81960785, 1)
+modulate = Color(0.04, 0.04, 0.04, 1)
 
 [node name="Button18" parent="GridContainer" index="23" unique_id=908786063]
-modulate = Color(0.4117647, 0.5411765, 0.5686275, 1)
+modulate = Color(0, 0, 0, 1)

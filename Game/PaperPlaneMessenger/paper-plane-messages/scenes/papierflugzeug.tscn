@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://bnavc6hp6auh4"]
 
 [ext_resource type="Script" uid="uid://cbtain0ecuhie" path="res://scripts/Papierflugzeug.cs" id="1_2cpuu"]
-[ext_resource type="Texture2D" uid="uid://bytiqw358stwf" path="res://icon.svg" id="2_268v5"]
 [ext_resource type="ArrayMesh" uid="uid://dkdfn273x5ktv" path="res://Assets/PaperPlane.obj" id="3_776m6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_776m6"]
@@ -20,7 +19,6 @@ script = ExtResource("1_2cpuu")
 Auftrieb = 3.0
 Luftwiderstand = 1.0
 MeshPfad = NodePath("MeshGimbal")
-_meinImage = ExtResource("2_268v5")
 
 [node name="MeshGimbal" type="Node3D" parent="." unique_id=318485393]
 
